@@ -4,8 +4,12 @@
 
 1. Open CMD line.
 2. Clone repository into local directory.
-3. Change directory to ./BombasticBookstore/bombasticbookstore
-4. Run command:
+3. Run command:
+
+> pip install -r requirements.txt
+   
+4. Change directory to ./BombasticBookstore/bombasticbookstore
+5. Run command:
 
 > python manage.py runserver
 
