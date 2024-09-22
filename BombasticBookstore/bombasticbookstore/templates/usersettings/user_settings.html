@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+
+{% block content %}
+  <h2>User Settings</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ username_form.as_p }}
+    {{ password_form.as_p }}
+    {{ preferences_form.as_p }}
+    <button type="submit">Save changes</button>
+  </form>
+{% endblock %}

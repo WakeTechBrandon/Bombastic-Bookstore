@@ -1,5 +1,46 @@
-<h1>Home Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Book App{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dark_mode.css' %}">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const darkMode = "{{ dark_mode|yesno:'true,false' }}";
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'user_settings' %}">Settings</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
 
-<form action="{% url 'search_results' %}" method="get">
-    {{ form }}
-</form>
+    <main>
+        {% block content %}
+        {% endblock %}
+        <form action="{% url 'search_results' %}" method="get">
+            {{ form }}
+        </form>
+    </main>
+
+    <footer>
+        <p>CSC 289 Group 2</p>
+    </footer>
+</body>
+</html>
