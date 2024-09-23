@@ -2,7 +2,8 @@
 <ul>
     {% for book in object_list %}
     <li>
-      {{ book.isbn }}, {{ book.title }}, {{ book.author }}, ${{ book.price }}
+      {{ book.isbn }}, {{ book.title }}, {{ book.f_name }}, ${{ book.l_name }}, {{ book.category }},
+       {{ book.year }}, {{ book.thumbnail }}, {{ book.quantity }}
     </li>
     {% endfor %}
 </ul>

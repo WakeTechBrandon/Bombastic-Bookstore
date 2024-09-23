@@ -11,3 +11,6 @@ class Book(models.Model):
     year = models.IntegerField()
     thumbnail = models.FileField()
     quantity = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.title

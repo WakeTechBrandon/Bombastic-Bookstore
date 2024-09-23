@@ -18,7 +18,8 @@ class SearchResultsView(ListView):
         query = self.request.GET["q"]
         object_list = (
             Book.objects.filter(title__icontains=query)
-            | Book.objects.filter(author__icontains=query)
+            | Book.objects.filter(f_name__icontains=query)
+            | Book.objects.filter(l_name__icontains=query)
             | Book.objects.filter(isbn__icontains=query)
         )
         return object_list
