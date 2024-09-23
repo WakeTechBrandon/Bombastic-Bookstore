@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.views.generic import FormView, ListView
 from .forms import SearchForm
 from .models import Book
+from django.http import HttpResponse
 
 
-# Create your views here.
 class HomepageView(FormView):
     template_name = "home.html"
     form_class = SearchForm
@@ -22,3 +22,8 @@ class SearchResultsView(ListView):
             | Book.objects.filter(isbn__icontains=query)
         )
         return object_list
+
+
+def test(request, book_id):
+    b = Book.objects.get(id=book_id)
+    return HttpResponse("You're looking at book %s." % b.title)
