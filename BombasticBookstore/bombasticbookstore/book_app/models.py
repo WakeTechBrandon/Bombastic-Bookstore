@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Book(models.Model):
     isbn = models.CharField(max_length=10)
@@ -10,3 +11,6 @@ class Book(models.Model):
     year = models.IntegerField()
     thumbnail = models.FileField()
     quantity = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.title
