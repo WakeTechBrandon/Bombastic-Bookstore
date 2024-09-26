@@ -12,7 +12,7 @@ class BookAdmin(admin.ModelAdmin):
         "category",
         "year",
         "thumbnail",
-        "quantity",
+        
     )
 
 
