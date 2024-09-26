@@ -27,4 +27,8 @@ class SearchResultsView(ListView):
 
 def test(request, book_id):
     b = Book.objects.get(id=book_id)
-    return HttpResponse("You're looking at book %s." % b.title)
+    return HttpResponse("You're looking at book %s." % b.title]
+
+def index(request):
+    return render(request, 'index.html')
+
