@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import FormView, ListView
 from .forms import SearchForm
 from .models import Book
@@ -27,8 +27,14 @@ class SearchResultsView(ListView):
 
 def test(request, book_id):
     b = Book.objects.get(id=book_id)
-    return HttpResponse("You're looking at book %s." % b.title]
+    return HttpResponse("You're looking at book %s." % b.title)
 
 def index(request):
     return render(request, 'index.html')
 
+def delete_item(request, isbn):
+    item = get_object_or_404(Book, id=isbn)
+    
+    item.delete()
+
+    return redirect("home")
