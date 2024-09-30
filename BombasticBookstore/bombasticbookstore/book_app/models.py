@@ -10,7 +10,10 @@ class Book(models.Model):
     category = models.CharField(max_length=50)
     year = models.IntegerField()
     thumbnail = models.FileField()
-    quantity = models.IntegerField(default=0)
-
+    
     def __str__(self):
         return self.title
+    
+class BookQuantity(models.Model):
+    book = models.OneToOneField(Book, on_delete=models.CASCADE, primary_key=True,to_field='id', related_name='book_id')
+    quantity = models.IntegerField(default=0)
