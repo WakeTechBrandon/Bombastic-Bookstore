@@ -1,16 +1,23 @@
 from django.shortcuts import render
 from django.views.generic import FormView, ListView
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import SearchForm
 from .models import Book
 from django.http import HttpResponse
 
 
-class HomepageView(FormView):
-    template_name = "home.html"
+class HomepageView(LoginRequiredMixin, ListView):
+    model = Book
+    template_name = "index.html"
+
+
+class SearchView(LoginRequiredMixin, FormView):
+    template_name = "search.html"
     form_class = SearchForm
 
 
-class SearchResultsView(ListView):
+class SearchResultsView(LoginRequiredMixin, ListView):
     model = Book
     template_name = "search_results.html"
 
@@ -25,10 +32,10 @@ class SearchResultsView(ListView):
         return object_list
 
 
+class CustomLoginView(LoginView):
+    template_name = "registration/login.html"
+
+
 def test(request, book_id):
     b = Book.objects.get(id=book_id)
-    return HttpResponse("You're looking at book %s." % b.title]
-
-def index(request):
-    return render(request, 'index.html')
-
+    return HttpResponse("You're looking at book %s." % b.title)
