@@ -11,14 +11,24 @@
 
     <h2>Log In</h2>
 
-    <form action="login.php" method="post">
-        <label for="userid">User ID:</label>
-        <input type="text" id="userid" name="userid"><br><br>
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password"><br><br>
-        <input type="submit" value="Login">
+        <input type="submit" value="Log In">
     </form><br>
 
+    {% if form.errors %}
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
     <h2>Sign Up</h2>
     <form action="signup.php" method="post">
         <label for="name">Name:</label>
@@ -32,6 +42,15 @@
         <input type="submit" value="Sign Up">
     </form><br>
 
+    {% if form.errors %}
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
     <h2>Continue as Guest</h2>
     <form action="guest.php" method="post">
         <input type="submit" value="Continue as Guest">
