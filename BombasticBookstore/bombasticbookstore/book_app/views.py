@@ -35,7 +35,3 @@ class SearchResultsView(LoginRequiredMixin, ListView):
 class CustomLoginView(LoginView):
     template_name = "registration/login.html"
 
-
-def test(request, book_id):
-    b = Book.objects.get(id=book_id)
-    return HttpResponse("You're looking at book %s." % b.title)
