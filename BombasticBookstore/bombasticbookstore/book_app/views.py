@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import FormView, ListView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import SearchForm
+from .forms import SearchForm, BookForm
 from .models import Book
 from django.http import HttpResponse
 
@@ -35,3 +35,13 @@ class SearchResultsView(LoginRequiredMixin, ListView):
 class CustomLoginView(LoginView):
     template_name = "registration/login.html"
 
+
+def add_book(request):
+    if request.method == 'POST':
+        form = BookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    else:
+        form = BookForm()
+    return render(request, 'add_book/add_book.html', {'form': form})
