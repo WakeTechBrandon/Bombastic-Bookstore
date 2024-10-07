@@ -1,8 +1,10 @@
-from django.urls import path
-from .views import SearchResultsView, HomepageView, delete_item
+
+from . import views
+from .views import SearchResultsView, CustomLoginView, SearchView, HomepageView, delete_item
 
 urlpatterns = [
-    path("", HomepageView.as_view(), name="home"),
-    path("search/", SearchResultsView.as_view(), name="search_results"),
-    path('inventory/delete/<int:item_id>/', delete_item.as_view(), name='delete_item'),
-]
+    path("", HomepageView.as_view(), name="index"),
+    path('add_book/', views.add_book, name='add_book'),
+    path("search/", SearchView.as_view(), name="search"),
+    path("search-results/", SearchResultsView.as_view(), name="search_results"),
+
