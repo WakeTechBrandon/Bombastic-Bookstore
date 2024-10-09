@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import FormView, ListView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -35,6 +36,11 @@ class SearchResultsView(LoginRequiredMixin, ListView):
 class CustomLoginView(LoginView):
     template_name = "registration/login.html"
 
+def test(request, book_id):
+    b = Book.objects.get(id=book_id)
+    return HttpResponse("You're looking at book %s." % b.title)
+
+
 
 def add_book(request):
     if request.method == 'POST':
@@ -45,3 +51,11 @@ def add_book(request):
     else:
         form = BookForm()
     return render(request, 'add_book/add_book.html', {'form': form})
+  
+def delete_item(request, isbn):
+    item = get_object_or_404(Book, id=isbn)
+    
+    item.delete()
+
+    return redirect("home")
+
