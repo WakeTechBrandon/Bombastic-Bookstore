@@ -1,6 +1,6 @@
-from django.urls import path
+
 from . import views
-from .views import SearchResultsView, CustomLoginView, SearchView, HomepageView
+from .views import SearchResultsView, CustomLoginView, SearchView, HomepageView, delete_item
 
 urlpatterns = [
     path("", HomepageView.as_view(), name="index"),
@@ -11,3 +11,4 @@ urlpatterns = [
     path("search-results/", SearchResultsView.as_view(), name="search_results"),
     path('view_all/', views.view_all, name='view_all')
 ]
+

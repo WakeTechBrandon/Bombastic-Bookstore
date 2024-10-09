@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +18,17 @@
 </head>
 <body>
     <h2>Welcome, {{ user.username }}!</h2>
+
     <h1>Main Menu</h1>
 
     <nav>
         <ul>
+            <li><a href="/add/">Add Item</a></li>
+            <li><a href="BombasticBookstore\bombasticbookstore\templates\remove.html">Remove Item</a></li>
             <a href="{% url 'add_book' %}">Add Item</a>
             <li><a href="/remove/">Remove Item</a></li>
-            <li><a href="/adjust_qty/">Edit/Update Item</a></li>
+            <li><a href="BombasticBookstore\bombasticbookstore\templates\remove.html">Remove Item</a></li>
+            <li><a href="/edit/">Edit/Update Item</a></li>
             <li><a href="/search/">Search Items</a></li>
             <li><a href="/view_all/">View All Items</a></li>
             <li><a href="/generate_report/">Generate Inventory Report</a></li>
