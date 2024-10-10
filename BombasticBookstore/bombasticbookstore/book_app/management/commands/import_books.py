@@ -1,6 +1,6 @@
 import csv
 from django.core.management.base import BaseCommand
-from book_app.models import Book
+from book_app.models import Book, BookQuantity
 
 class Command(BaseCommand):
     help = 'Import books from a CSV file'
@@ -25,6 +25,9 @@ class Command(BaseCommand):
                         'num_pages': row['num_pages'],
                     }
                 )
+                
+                BookQuantity.objects.create(book_id=book.id, quantity=0)
+                
                 if created:
                     self.stdout.write(self.style.SUCCESS(f"Book '{book.title}' added successfully"))
                 else:

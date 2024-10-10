@@ -4,8 +4,10 @@ from django.views.generic import FormView, ListView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import SearchForm, BookForm
-from .models import Book
-from django.http import HttpResponse
+from .models import Book, BookQuantity
+from django.http import HttpResponse, HttpResponseRedirect
+from django.template import loader
+from django.urls import reverse
 
 
 class HomepageView(LoginRequiredMixin, ListView):
@@ -26,9 +28,9 @@ class SearchResultsView(LoginRequiredMixin, ListView):
         query = self.request.GET["q"]
         object_list = (
             Book.objects.filter(title__icontains=query)
-            | Book.objects.filter(f_name__icontains=query)
-            | Book.objects.filter(l_name__icontains=query)
-            | Book.objects.filter(isbn__icontains=query)
+            | Book.objects.filter(author_first__icontains=query)
+            | Book.objects.filter(author_last__icontains=query)
+            | Book.objects.filter(isbn10__icontains=query)
         )
         return object_list
 
@@ -51,6 +53,31 @@ def add_book(request):
     else:
         form = BookForm()
     return render(request, 'add_book/add_book.html', {'form': form})
+
+def adjust_qty(request, id):
+  book = Book.objects.select_related('book_id').get(id=id)
+  template = loader.get_template('adjust_qty.html')
+  context = {
+    'book': book,
+  }
+  return HttpResponse(template.render(context, request))
+
+def update_record(request, id):
+  qty = request.POST['qty']
+  title=request.POST['title']
+  book = Book.objects.select_related('book_id').get(id=id)
+  q = BookQuantity.objects.get(book_id=id)
+  q.quantity = qty
+  book.title = title
+  book.save()
+  q.save()
+  return HttpResponseRedirect(reverse('index'))
+
+def view_all(request):
+    
+    books = Book.objects.select_related('book_id').all()
+    return render(request,'view_all.html',{'books':books})
+
   
 def delete_item(request, isbn):
     item = get_object_or_404(Book, id=isbn)
@@ -58,4 +85,5 @@ def delete_item(request, isbn):
     item.delete()
 
     return redirect("home")
+
 

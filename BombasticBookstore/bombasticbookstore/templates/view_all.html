@@ -1,0 +1,10 @@
+
+  <ul>
+    {% for book in books %}
+    
+      <li>
+        {{ book.title }}
+        - <a href="{% url 'adjust_qty' book.id%}">[Qty: {{book.book_id.quantity}}]</a>
+      </li>
+    {% endfor %}
+  </ul>
