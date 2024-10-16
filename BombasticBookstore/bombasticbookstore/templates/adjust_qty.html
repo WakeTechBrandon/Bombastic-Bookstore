@@ -1,4 +1,8 @@
+{% extends "logo.html" %}
+
 <h1>Update book</h1>
+
+{% block content %}
 
 <form action="updaterecord/{{ book.id }}" method="post">
 {% csrf_token %}
@@ -10,3 +14,5 @@ Quantity:<br>
 <br><br>
 <input type="submit" value="Submit">
 </form>
+
+{% endblock %}
