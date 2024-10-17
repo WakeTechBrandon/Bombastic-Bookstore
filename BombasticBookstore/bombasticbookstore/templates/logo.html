@@ -10,6 +10,50 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
+	
+	main {
+     position: fixed;
+     top: 70%;
+     left: 50%;
+	 width: 1000px;
+	 height: 1500px;
+     transform: translate(-50%, -50%);
+    }
+	.card {
+	  /* Add shadows to create the "card" effect */
+	  display: flex;
+	  justify-content: flex-start;
+	  flex-wrap: wrap;
+	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	  transition: 0.3s;
+	  background-color: rgba(0,0,0,0.2);
+	  border-radius: 25px;
+	}
+	.card-container ul {
+	  list-style: none;
+	  font-size: 24px;
+	}
+	.card-container a {
+	  text-decoration: none;
+	}
+	/* On mouse-over, add a deeper shadow */
+	.card:hover {
+	  background-color: white;
+	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	}
+	
+	.card nav ul li {
+	  padding: 10px;
+	  background-color: rgba(0,0,0,0);
+	}
+	.card nav ul li:hover {
+	  background-color: rgba(0,0,0,0.2);
+	}
+	/* Add some padding inside the card container */
+	.container {
+	  padding: 2px 16px;
+	}
+	
 </style>
 {% block content %}{% endblock %}
 </head>
