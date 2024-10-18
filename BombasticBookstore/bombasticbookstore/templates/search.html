@@ -1,5 +1,44 @@
-<h1>Search Page</h1>
 
-<form action="{% url 'search_results' %}" method="get">
-    {{ form }}
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Bombastic Bookstore Login Page</title>
+	<style>
+	main {
+	 padding: 100px;
+	 justify-content: center;
+	 position: fixed;
+	 top: 50%;
+	 left: 50%;
+	 width: 500px;
+	 transform: translate(-50%, -50%);
+	 background-color: rgba(11,11,11,1);
+	 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	 border-radius: 25px;
+	}
+	.container {
+		position: relative;
+		left: 20%;
+	}
+	h1 {
+		position: relative;
+		left: 10%;
+	}
+	</style>
+	
+</head>
+<body>
+	<main>
+	<div class="container">
+		<h1>Search Page</h1>
+
+		<div class="search">
+			<form action="{% url 'search_results' %}" method="get" style="width: 100%;">
+				{{ form }}
+			</form>
+		</div>
+	</div> <!-- Container -->
+	</main>
+</body>
+</html>

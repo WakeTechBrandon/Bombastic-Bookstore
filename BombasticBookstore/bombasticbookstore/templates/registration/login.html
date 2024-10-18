@@ -30,7 +30,7 @@
 		.card {
 		  /* Add shadows to create the "card" effect */
 		  padding: 25px;
-			display: inline;
+		  display: inline;
 		  justify-content: center;
 		  flex-wrap: wrap;
 		  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -96,29 +96,29 @@
 		}
     </style>
 	<script>
-	window.addEventListener("DOMContentLoaded", (event) => {
-		var toggle = document.getElementById("toggle");
-		var opt1 = document.getElementsByClassName("toggle-switch opt1");
-		var opt2 = document.getElementsByClassName("toggle-switch opt2");
+		window.addEventListener("DOMContentLoaded", (event) => {
+			var toggle = document.getElementById("toggle");
+			var opt1 = document.getElementsByClassName("toggle-switch opt1");
+			var opt2 = document.getElementsByClassName("toggle-switch opt2");
 
-		toggle?.addEventListener("click", function() {
-		  if (toggle.checked) {
-			  for (var i=0;i<opt1.length;i+=1){
-				opt1[i].style.display = 'none';
+			toggle?.addEventListener("click", function() {
+			  if (toggle.checked) {
+				  for (var i=0;i<opt1.length;i+=1){
+					opt1[i].style.display = 'none';
+				  }
+				  for (var i=0;i<opt2.length;i+=1){
+					opt2[i].style.display = 'block';
+				  }
+			  } else {
+				  for (var i=0;i<opt1.length;i+=1){
+					opt1[i].style.display = 'block';
+				  }
+				  for (var i=0;i<opt2.length;i+=1){
+					opt2[i].style.display = 'none';
+				  }
 			  }
-			  for (var i=0;i<opt2.length;i+=1){
-				opt2[i].style.display = 'block';
-			  }
-		  } else {
-			  for (var i=0;i<opt1.length;i+=1){
-				opt1[i].style.display = 'block';
-			  }
-			  for (var i=0;i<opt2.length;i+=1){
-				opt2[i].style.display = 'none';
-			  }
-		  }
+			});
 		});
-	});
 	</script>
 </head>
 <body>
