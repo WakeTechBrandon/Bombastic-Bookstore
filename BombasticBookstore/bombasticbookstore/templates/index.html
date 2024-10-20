@@ -1,28 +1,27 @@
+{% extends "logo.html" %}
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
-    body {
-        background-image: linear-gradient(rgba(252, 252, 252, 0.929), rgba(241, 241, 208, 0.5)),
-        url("{% static './bombasticbooks.png' %}");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-</style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bombastic Bookstore Inventory Management Tool</title>
 </head>
+{% block content %}
 <body>
     <h2>Welcome, {{ user.username }}!</h2>
+
     <h1>Main Menu</h1>
 
     <nav>
         <ul>
+            <li><a href="/add/">Add Item</a></li>
+            <li><a href="BombasticBookstore\bombasticbookstore\templates\remove.html">Remove Item</a></li>
             <li><a href="{% url 'add_book' %}">Add Item</a></li>
             <li><a href="/remove/">Remove Item</a></li>
+            <li><a href="BombasticBookstore\bombasticbookstore\templates\remove.html">Remove Item</a></li>
             <li><a href="/edit/">Edit/Update Item</a></li>
             <li><a href="/search/">Search Items</a></li>
             <li><a href="/view_all/">View All Items</a></li>
@@ -33,4 +32,5 @@
     </nav>
 
 </body>
+{% endblock %}
 </html>

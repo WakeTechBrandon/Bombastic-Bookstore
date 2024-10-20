@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <h1>Remove Books</h1>
+    <ul>
+        {% for book in object_list %}
+        <li>
+          {{ book.isbn }}, {{ book.title }}, {{ book.f_name }}, {{ book.l_name }}, {{ book.category }},
+          {{ book.year }}, {{ book.thumbnail }}, {{ book.quantity }}
+    
+          <a href="{% url 'delete_item' book.isbn %}" 
+             onclick="return confirm('Are you sure you want to remove this book?');">
+             Remove
+          </a>
+        </li>
+        {% endfor %}
+    </ul>
+</html>

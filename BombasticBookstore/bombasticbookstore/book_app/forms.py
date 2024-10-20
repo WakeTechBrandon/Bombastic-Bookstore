@@ -1,5 +1,5 @@
 from django import forms
-from .models import Book
+from .models import Book, BookQuantity
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
@@ -31,3 +31,8 @@ class BookForm(forms.ModelForm):
             "published_year": "Published Year",
             "num_pages": "Number of Pages",
         }
+
+
+class BookQtyForm(forms.ModelForm):
+    title = forms.CharField(label="title", max_length=100)
+    quantity = forms.IntegerField(label="qty")
