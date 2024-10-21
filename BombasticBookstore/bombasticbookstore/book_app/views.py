@@ -2,9 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import FormView, ListView, CreateView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import SearchForm, BookForm
+from .forms import SearchForm, BookForm,BookQtyForm
 from .models import Book, BookQuantity
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound
 from django.template import loader
 from django.urls import reverse
 from django.urls import reverse_lazy
@@ -35,11 +35,6 @@ class SearchResultsView(LoginRequiredMixin, ListView):
         return object_list
 
 
-def test(request, book_id):
-    b = Book.objects.get(id=book_id)
-    return HttpResponse("You're looking at book %s." % b.title)
-
-
 def add_book(request):
     if request.method == "POST":
         form = BookForm(request.POST)
@@ -61,13 +56,13 @@ def adjust_qty(request, id):
 
 
 def update_record(request, id):
-    qty = request.POST["qty"]
-    title = request.POST["title"]
-    book = Book.objects.select_related("book_id").get(id=id)
+    try:
+        qty = int(request.POST["qty"])
+    except ValueError:
+        return HttpResponse("Invalid input: Please provide a valid number.")
+    
     q = BookQuantity.objects.get(book_id=id)
     q.quantity = qty
-    book.title = title
-    book.save()
     q.save()
     return HttpResponseRedirect(reverse("index"))
 
