@@ -4,7 +4,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import SearchForm, BookForm,BookQtyForm
 from .models import Book, BookQuantity
-from django.http import HttpResponse, HttpResponseRedirect, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from django.urls import reverse_lazy
@@ -59,7 +59,7 @@ def update_record(request, id):
     try:
         qty = int(request.POST["qty"])
     except ValueError:
-        return HttpResponse("Invalid input: Please provide a valid number.")
+        return HttpResponse("Invalid input: Please go back and provide a valid number.")
     
     q = BookQuantity.objects.get(book_id=id)
     q.quantity = qty
