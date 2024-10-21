@@ -5,5 +5,6 @@
       {{ book.isbn10 }}, {{ book.title }}, {{ book.author_first }}, ${{ book.author_last }}, {{ book.categories }},
        {{ book.published_year }}, {{ book.thumbnail }}, {{ book.num_pages }} - <a href="{% url 'adjust_qty' book.id%}">[Click to edit book ID:{{book.id}}]</a>
     </li>
+    <br>
     {% endfor %}
 </ul>
