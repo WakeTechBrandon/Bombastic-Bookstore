@@ -3,3 +3,15 @@
 <form action="{% url 'search_results' %}" method="get">
     {{ form }}
 </form>
+<h1>Main Menu</h1>
+
+<nav>
+    <ul>
+        <li><a href="/add/">Add Item</a></li>
+        <li><a href="{% url 'remove_item_page' %}">Remove Item</a></li>
+        <li><a href="/edit/">Edit/Update Item</a></li>
+        <li><a href="/search/">Search Items</a></li>
+        <li><a href="/view_all/">View All Items</a></li>
+        <li><a href="/generate_report/">Generate Inventory Report</a></li>
+    </ul>
+</nav>
