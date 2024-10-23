@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    body {
+        background-image: linear-gradient(rgba(252, 252, 252, 0.929), rgba(241, 241, 208, 0.5)),
+        url("{% static './bombasticbooks.png' %}");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+{% block content %}{% endblock %}
+</head>
+</html>
