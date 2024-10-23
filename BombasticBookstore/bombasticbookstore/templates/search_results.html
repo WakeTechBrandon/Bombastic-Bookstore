@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <h1>Search Results</h1>
+<br>
 <ul>
     {% for book in object_list %}
-    
+
       <div class="media">
         <img src="{{ book.thumbnail }}"  > 
         <div class="media-body">
@@ -13,7 +14,7 @@
           <b>Category:</b> {{ book.categories }}<br>
           <b>Pub year:</b> {{ book.published_year }}<br>
           <b>Pages:</b> {{ book.num_pages }}<br>
-           <a href="{% url 'adjust_qty' book.id%}">[Click to edit book:{{book.title}}]</a>
+           <a href="{% url 'adjust_qty' book.id%}">[Click to edit quantities: {{book.title}}]</a>
            <br>
            
         </ul>
