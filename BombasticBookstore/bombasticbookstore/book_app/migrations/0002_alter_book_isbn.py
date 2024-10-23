@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='book',
             name='isbn',
-            field=models.CharField(max_length=10),
+            field=models.CharField(default="0000000000000", max_length=13),
         ),
     ]

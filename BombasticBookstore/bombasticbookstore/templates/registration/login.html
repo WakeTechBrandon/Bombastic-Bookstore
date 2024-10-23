@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Bombastic Bookstore Login Page</title>
+    <style>
+        body {font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif}
+    </style>
+</head>
+<body>
+    <h1>Welcome to Bombastic Bookstore</h1><br>
+
+    <h2>Log In</h2>
+
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Log In">
+    </form><br>
+
+    {% if form.errors %}
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h2>Sign Up</h2>
+    <form action="signup.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="userID">Enter User ID:</label>
+        <input type="text" id="userID" name="userID"><br><br>
+        <label for="password">Create Password(at least 8 characters):</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Sign Up">
+    </form><br>
+
+    {% if form.errors %}
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h2>Continue as Guest</h2>
+    <form action="guest.php" method="post">
+        <input type="submit" value="Continue as Guest">
+    </form>
+
+</body>
+</html>
