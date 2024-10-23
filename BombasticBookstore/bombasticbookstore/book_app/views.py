@@ -32,9 +32,12 @@ def test(request, book_id):
 def index(request):
     return render(request, 'index.html')
 
-def delete_item(request, isbn):
-    item = get_object_or_404(Book, id=isbn)
-    
-    item.delete()
+def confirm_remove_item(request, isbn):
+    book = get_object_or_404(Book, isbn=isbn)
+    return render(request, 'remove.html', {'book': book})
 
-    return redirect("home")
+def delete_item(request, isbn):
+    book = get_object_or_404(Book, isbn=isbn)
+    book.delete()
+    return redirect('search_results')
+
