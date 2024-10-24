@@ -21,16 +21,16 @@ class SearchView(LoginRequiredMixin, FormView):
 
 
 class SearchResultsView(LoginRequiredMixin, ListView):
-    model = Book
+    model = BookQuantity
     template_name = "search_results.html"
 
     def get_queryset(self):
         query = self.request.GET["q"]
         object_list = (
-            Book.objects.filter(title__icontains=query)
-            | Book.objects.filter(author_first__icontains=query)
-            | Book.objects.filter(author_last__icontains=query)
-            | Book.objects.filter(isbn10__icontains=query)
+            Book.objects.select_related("book_id").filter(title__icontains=query)
+            | Book.objects.select_related("book_id").filter(author_first__icontains=query)
+            | Book.objects.select_related("book_id").filter(author_last__icontains=query)
+            | Book.objects.select_related("book_id").filter(isbn10__icontains=query)
         )
         return object_list
 
