@@ -78,7 +78,7 @@ def confirm_remove_item(request, isbn):
     
     if request.method == 'POST':
         book.delete()
-        return redirect('home')
+        return redirect('index')
     
     return render(request, 'remove_confirmation.html', {'book': book})
 
