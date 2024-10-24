@@ -27,5 +27,6 @@
         {% csrf_token %}
         <input type="submit" value="Sign Up">
     </form>
+    <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
 </body>
 </html>
