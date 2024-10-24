@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Remove Book</title>
+</head>
+<body>
+    <h1>Confirm Remove Book</h1>
+    <p>Are you sure you want to remove the following book?</p>
+
+    <ul>
+        <li><b>ISBN:</b> {{ book.isbn10 }}</li>
+        <li><b>Title:</b> {{ book.title }}</li>
+        <li><b>Author:</b> {{ book.author_first }} {{ book.author_last }}</li>
+        <li><b>Category:</b> {{ book.categories }}</li>
+        <li><b>Published Year:</b> {{ book.published_year }}</li>
+        <li><b>Pages:</b> {{ book.num_pages }}</li>
+    </ul>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm Remove</button>
+        <a href="{% url 'index' %}">Cancel</a>
+    </form>
+</body>
+</html>
