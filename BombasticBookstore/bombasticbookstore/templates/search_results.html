@@ -15,8 +15,15 @@
           <b>Pub year:</b> {{ book.published_year }}<br>
           <b>Pages:</b> {{ book.num_pages }}<br>
            <a href="{% url 'adjust_qty' book.id%}">[Click to edit quantities: {{book.title}}]</a>
-           <a href="{% url 'confirm_remove_item' book.isbn %}" 
-           onclick="return confirm('Are you sure you want to remove this book?');">Remove</a>
+           
+           {% if book.isbn10 %}
+           <a href="{% url 'confirm_remove_item' book.isbn10 %}" onclick="return confirm('Are you sure you want to remove this book?');">
+              Remove
+           </a>
+           {% else %}
+           <p>ISBN not available</p>
+           {% endif %}
+         </li>
            <br>
            
         </ul>

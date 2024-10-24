@@ -74,11 +74,16 @@ def view_all(request):
 
 
 def confirm_remove_item(request, isbn):
-    book = get_object_or_404(Book, isbn=isbn)
-    return render(request, 'remove.html', {'book': book})
+    book = get_object_or_404(Book, isbn10=isbn)
+    
+    if request.method == 'POST':
+        book.delete()
+        return redirect('home')
+    
+    return render(request, 'remove_confirmation.html', {'book': book})
 
 def delete_item(request, isbn):
-    book = get_object_or_404(Book, isbn=isbn)
+    book = get_object_or_404(Book, isbn10=isbn)
     book.delete()
     return redirect('search_results')
 
