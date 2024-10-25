@@ -3,63 +3,77 @@
 <html lang="en">
 <head>
 <style>
-	* {
+	<style>
+		* {
 		color: white;
-	}
-    body {
-        background-image: linear-gradient(rgba(252, 252, 252, 0.929), rgba(241, 241, 208, 0.5)),
-        url("{% static './bombasticbooks.png' %}");
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-	
-	main {
-     position: fixed;
-     top: 70%;
-     left: 50%;
-	 width: 1000px;
-	 height: 1500px;
-     transform: translate(-50%, -50%);
-    }
-	.card {
-	  /* Add shadows to create the "card" effect */
-	  display: flex;
-	  justify-content: flex-start;
-	  flex-wrap: wrap;
-	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	  transition: 0.3s;
-	  background-color: rgba(0,0,0,0.2);
-	  border-radius: 25px;
-	}
-	.login {
-	  display: flex;
-	}
-	.card-container ul {
-	  list-style: none;
-	  font-size: 18px;
-	}
-	.card-container a {
-	  text-decoration: none;
-	}
-	/* On mouse-over, add a deeper shadow */
-	.card:hover {
-	  background-color: white;
-	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	}
-	
-	.card nav ul li {
-	  padding: 10px;
-	  background-color: rgba(0,0,0,0);
-	}
-	.card nav ul li:hover {
-	  background-color: rgba(0,0,0,0.2);
-	  border-radius: 10px;
-	}
-	/* Add some padding inside the card container */
-	.container {
-	  padding: 2px 16px;
-	}
+		}
+		/* Set the position property of the header to fixed */
+		  header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			background-color: white;
+			background-image: url("{% static './bomb4.png' %}");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: left;
+		  }
+		body {
+			background-image: linear-gradient(rgba(252, 252, 252, 0.929), rgba(241, 241, 208, 0.5)),
+			url("{% static './bombasticbooks.png' %}");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		
+		main {
+		position: fixed;
+		top: 70%;
+		left: 50%;
+		width: 1000px;
+		height: 1500px;
+		transform: translate(-50%, -50%);
+		}
+		.card {
+		/* Add shadows to create the "card" effect */
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		background-color: rgba(0,0,0,0.2);
+		border-radius: 25px;
+		}
+		.card-container ul {
+		list-style: none;
+		font-size: 18px;
+		}
+		.card-container a {
+		text-decoration: none;
+		}
+		/* On mouse-over, add a deeper shadow */
+		.card:hover {
+		background-color: white;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		}
+		
+		.card nav ul li {
+		padding: 10px;
+		background-color: rgba(0,0,0,0);
+		}
+		.card nav ul li:hover {
+		background-color: rgba(0,0,0,0.2);
+		border-radius: 10px;
+		}
+		/* Add some padding inside the card container */
+		.container {
+		padding: 2px 16px;
+		}
+	</style>
 	
 </style>
 {% block content %}{% endblock %}

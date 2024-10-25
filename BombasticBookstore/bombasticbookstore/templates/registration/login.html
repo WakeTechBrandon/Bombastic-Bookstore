@@ -45,44 +45,19 @@
 		.toggle-checkbox {
 		  display: none;
 		}
-		/* Slider Appearence */
-		.slider {
-		  position: relative;
-		}
-		/* ellipsis */
-		.slider::before {
-		  background: lightblue;
-		  border-radius: 34px;
-		  bottom: 0;
-		  content: '';
-		  height: 24px;
-		  margin: auto;
-		  position: absolute;
-		  top: 0;
-		  width: 40px;
-		}
-		/* circle */
-		.slider::after {
-		  background: navy;
-		  border-radius: 50%;
-		  bottom: 0;
-		  content: '';
-		  height: 16px;
-		  left: 4px;
-		  margin: auto;
-		  position: absolute;
-		  top: 0;
-		  transition: 0.4s;
-		  width: 16px;
-		}
-		.toggle-checkbox:checked + .slider::after {
-		  background-color: maroon;
-		  transform: translateX(16px);
-		}
 		.toggle-label {
-		  margin-left: 50px;
+			padding: 5px;
+			background-color: grey;
+			color: white;
+			outline-width: 1px;
+			outline-color: white;
+			border-radius: 5px;
 		}
 		/* Content Toggle */
+		.toggle-label:hover {
+			background-color: #F2F2F2;
+			color: white;
+		}
 		.toggle-switch.opt1 {
 			display: inline;
 		}
@@ -178,7 +153,7 @@
 	<div style="display:flex; justify-content:center; padding: 25px;">
 		<input class="toggle-checkbox" type="checkbox" id="toggle">
 		<label class="slider" for="toggle">
-			<span class="toggle-switch opt1 toggle-label">Sign Up</span>
+			<span class="toggle-switch opt1 toggle-label">New User? Sign Up</span>
 			<span class="toggle-switch opt2 toggle-label">Login</span>
 		</label>
 	</div>
