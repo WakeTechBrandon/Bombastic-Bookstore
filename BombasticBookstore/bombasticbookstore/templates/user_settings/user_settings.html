@@ -2,14 +2,37 @@
 <html>
 <head>
 	<title>User Settings</title>
+	<style>
+	main {
+		position: fixed;
+		top: 70%;
+		left: 50%;
+		width: 1000px;
+		height: 1500px;
+		transform: translate(-50%, -50%);
+	}
+	.card {
+		/* Add shadows to create the "card" effect */
+		display: inline-block;
+		padding: 25px;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		background-color: rgba(0,0,0,0.2);
+		border-radius: 25px;
+		width: 100%;
+	}
+	</style>
 </head>
 <body>
-	<h1>User Settings</h1>
-	<form method="post">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button type="submit">Save changes</button>
-	</form>
-	<p><a href="{% url 'password_change' %}">Change password</a></p>
+<main>
+	<div class="card">
+		<h1 style="text-align: center;">User Settings</h1>
+		<form method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Save changes</button>
+		</form>
+	</div>
+</main>
 </body>
 </html>

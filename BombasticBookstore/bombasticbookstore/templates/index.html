@@ -1,32 +1,41 @@
 {% extends "logo.html" %}
 
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bombastic Bookstore Inventory Management Tool</title>
+	
 </head>
 {% block content %}
 <body>
-    <h2>Welcome, {{ user.username }}!</h2>
+	<header>
+		<h2>Welcome, {{ user.username }}!</h2>
+	</header>
+	<main>
 
-    <h1>Main Menu</h1>
+	<div class="card-container">
+		<h1>Main Menu</h1>
 
-    <nav>
-        <ul>
-            <li><a href="{% url 'add_book' %}">Add Item</a></li>
-            <li><a href="/search/">Update Quantities</a></li>
-            <li><a href="/search/">Search Items</a></li>
-            <li><a href="/view_all/">View All Items</a></li>
-            <li><a href="/generate_report/">Generate Inventory Report</a></li>
-            <li><a href="/settings/">Settings</a></li>
-            <li><a href="{% url 'logout' %}">Sign Out</a></li>
-        </ul>
-    </nav>
-
+		<div class="card">
+		<nav>
+			<ul>
+				<li><a href="{% url 'add_book' %}">Add Item</a></li>
+				<li><a href="/search/">Update Quantities</a></li>
+				<li><a href="/search/">Search Items</a></li>
+				<li><a href="/view_all/">View All Items</a></li>
+				<li><a href="/generate_report/">Generate Inventory Report</a></li>
+				<li><a href="/settings/">Settings</a></li>
+				<li><a href="{% url 'logout' %}">Sign Out</a></li>
+			</ul>
+		</nav>
+		</div>
+		</div>
+	</div>
+	</main>
 </body>
 {% endblock %}
 </html>
