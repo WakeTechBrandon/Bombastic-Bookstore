@@ -14,3 +14,4 @@ class SignUpView(FormView):
         user = form.save()
         login(self.request, user)
         return super().form_valid(form)
+

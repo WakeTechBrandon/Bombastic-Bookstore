@@ -28,18 +28,17 @@
 	}
 	</style>
 </head>
-<body>
 <main>
-    
-	<div class="container">
-		<h1>Add a New Book</h1>
-		<form method="post">
-			{% csrf_token %}
-			{{ form.as_p }}
-			<button type="submit">Add Book</button>
-		</form>
-		<p><a href="{% url 'index' %}">Back to Main Menu</a></p>
-	</div>
+<h1>About Us: Group 2</h1>
+<p>Welcome to our about page! This website was created by our group for our CSC.289.0001 Capstone Project as part of our coursework at Wake Tech Community College.</p>
+
+<h2>Meet Our Team</h2>
+<ul>
+  {% for team_member in team_members %}
+    <li>{{ team_member.name }}</li>
+  {% endfor %}
+</ul>
+<p><a href="{% url 'index' %}">Back to Main Menu</a></p>
 </main>
 </body>
 </html>
