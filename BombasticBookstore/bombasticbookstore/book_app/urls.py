@@ -19,4 +19,5 @@ urlpatterns = [
     path("view_all/", views.view_all, name="view_all"),
     path('inventory/delete/<str:isbn>/', confirm_remove_item, name='confirm_remove_item'),  
     path('inventory/delete/confirm/<str:isbn>/', delete_item, name='delete_item'),  
+    path('about/', views.about, name='about'),
 ]
