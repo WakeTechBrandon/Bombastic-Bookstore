@@ -1,6 +1,7 @@
 import csv
 from django.core.management.base import BaseCommand
 from book_app.models import Book, BookQuantity
+import random
 
 class Command(BaseCommand):
     help = 'Import books from a CSV file'
@@ -13,6 +14,7 @@ class Command(BaseCommand):
         with open(csv_file, newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             for row in reader:
+                rand = random.randint(1,20)
                 book, created = Book.objects.get_or_create(
                     isbn10=row['isbn10'],
                     defaults={
@@ -26,7 +28,7 @@ class Command(BaseCommand):
                     }
                 )
                 
-                BookQuantity.objects.create(book_id=book.id, quantity=0)
+                BookQuantity.objects.create(book_id=book.id, quantity=rand)
                 
                 if created:
                     self.stdout.write(self.style.SUCCESS(f"Book '{book.title}' added successfully"))

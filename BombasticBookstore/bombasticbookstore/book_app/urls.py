@@ -5,7 +5,8 @@ from .views import (
     SearchView,
     HomepageView,
     delete_item,
-    confirm_remove_item
+    confirm_remove_item,
+    BootstrapFilterView
 )
 
 urlpatterns = [
@@ -16,7 +17,8 @@ urlpatterns = [
     path("adjust_qty/updaterecord/<int:id>", views.update_record, name="update_record"),
     path("search/", SearchView.as_view(), name="search"),
     path("search-results/", SearchResultsView.as_view(), name="search_results"),
-    path("view_all/", views.view_all, name="view_all"),
+    path("view_all/", BootstrapFilterView, name='bootstrap'),
     path('inventory/delete/<str:isbn>/', confirm_remove_item, name='confirm_remove_item'),  
     path('inventory/delete/confirm/<str:isbn>/', delete_item, name='delete_item'),  
+    
 ]

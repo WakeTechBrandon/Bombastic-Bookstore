@@ -7,8 +7,7 @@ from .models import Book, BookQuantity
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from django.urls import reverse_lazy
-
+from django.db.models import F
 
 class HomepageView(LoginRequiredMixin, ListView):
     model = Book
@@ -66,12 +65,53 @@ def update_record(request, id):
     q.save()
     return HttpResponseRedirect(reverse("index"))
 
+#
+#def view_all(request):
 
-def view_all(request):
+    #books = Book.objects.select_related("book_id").all()
+    #title_contains_query = request.GET.get('title_contains')
+    #myFilter = BookFilter(request.GET, queryset=books)
+    #books = myFilter.qs
+    #context = {"books": books, "myFilter": myFilter}
+    #context = {'queryset':books}
+    #return render(request, "view_all.html", context)
 
-    books = Book.objects.select_related("book_id").all()
-    return render(request, "view_all.html", {"books": books})
+def is_valid_queryparam(param):
+    return param != '' and param is not None
+    
+def filter(request):
+    qs= Book.objects.all()
+    authors = request.GET.get('author')
+    category = request.GET.get('category')
+    instock = request.GET.get('in-stock')
+    flag=""
+    if is_valid_queryparam(category) and category != 'Choose...':
+        flag=category
+        qs = qs.filter(categories=category)
+    if is_valid_queryparam(authors) and authors != 'Choose...':
+        flag=authors
+        qs = qs.filter(author_last=authors)
+    if instock == 'on':
+        qs = qs.filter(book_id__quantity__gt=0)
+        toggle="in stock"
+    else: toggle =" "
+        #qs = Book.objects.raw("Select a.id,a.categories, a.author_last, a.title, b.quantity from book_app_book a, book_app_bookquantity b where b.quantity >0")
+     
+    return qs,flag, toggle
 
+def BootstrapFilterView(request):
+    qs,flag, toggle = filter(request)
+    cats = Book.objects.select_related('book_id').values('categories').distinct()
+    authors = Book.objects.values('author_last').distinct()
+    #count= BookQuantity.objects.values('quantity')
+    context = {
+        'flag':flag,
+        'queryset': qs,
+        'categories': cats,
+        'authors' :authors,
+        'instock':toggle
+    }
+    return render(request, "view_all.html", context) 
 
 def confirm_remove_item(request, isbn):
     book = get_object_or_404(Book, isbn10=isbn)
