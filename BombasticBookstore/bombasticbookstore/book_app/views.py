@@ -129,4 +129,13 @@ def delete_item(request, isbn):
     book.delete()
     return redirect('search_results')
 
-
+def about(request):
+    team_members = [
+        {'name': 'Ryan Burres'},
+        {'name': 'Jaylan Chavis'},
+        {'name': 'Brandon Biggs'},
+        {'name': 'James Dove'},
+        {'name': 'Joshua Macy'},
+        {'name': 'Julia McDonald'},
+    ]
+    return render(request, 'about.html', {'team_members': team_members})
