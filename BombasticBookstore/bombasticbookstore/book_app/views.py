@@ -84,12 +84,13 @@ def filter(request):
     authors = request.GET.get('author')
     category = request.GET.get('category')
     instock = request.GET.get('in-stock')
-    flag=""
+    flag_cat=""
+    flag_auth=""
     if is_valid_queryparam(category) and category != 'Choose...':
-        flag=category
+        flag_cat=category
         qs = qs.filter(categories=category)
     if is_valid_queryparam(authors) and authors != 'Choose...':
-        flag=authors
+        flag_auth=authors
         qs = qs.filter(author_last=authors)
     if instock == 'on':
         qs = qs.filter(book_id__quantity__gt=0)
@@ -97,15 +98,16 @@ def filter(request):
     else: toggle =" "
         #qs = Book.objects.raw("Select a.id,a.categories, a.author_last, a.title, b.quantity from book_app_book a, book_app_bookquantity b where b.quantity >0")
      
-    return qs,flag, toggle
+    return qs,flag_auth,flag_cat, toggle
 
 def BootstrapFilterView(request):
-    qs,flag, toggle = filter(request)
+    qs,flag_auth,flag_cat, toggle = filter(request)
     cats = Book.objects.select_related('book_id').values('categories').distinct()
     authors = Book.objects.values('author_last').distinct()
     #count= BookQuantity.objects.values('quantity')
     context = {
-        'flag':flag,
+        'flagcat':flag_cat,
+        'flagauth':flag_auth,
         'queryset': qs,
         'categories': cats,
         'authors' :authors,
