@@ -1,0 +1,52 @@
+.flex-parent 
+{
+    display: inline;
+}
+
+.flex-child 
+{
+    flex: 1;
+    justify-content: center;
+}
+
+/* toggle styling starts here */
+		/* hide the "default" checkbox/appearance */
+.toggle-checkbox 
+{
+    display: none;
+}
+.toggle-label 
+{
+    padding: 5px;
+    background-color: grey;
+    color: white;
+    outline-width: 1px;
+    outline-color: white;
+    border-radius: 5px;
+}
+/* Content Toggle */
+.toggle-label:hover 
+{
+	background-color: #F2F2F2;
+	color: white;
+}
+
+.toggle-switch.opt1 
+{
+    display: inline;
+}
+
+.toggle-switch.opt2 
+{
+  display: none;
+}
+
+.toggle-checkbox:checked ~ .slider > .toggle-switch.opt1 
+{
+  display: none;
+}
+
+.toggle-checkbox:checked ~ .slider > .toggle-switch.opt2 
+{
+  display: inline;
+}
