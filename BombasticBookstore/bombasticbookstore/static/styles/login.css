@@ -28,8 +28,8 @@ main
   /* Add shadows to create the "card" effect */
     padding: 25px;
     display: inline;
-    justify-content: center;
-    flex-wrap: wrap;
+    /*justify-content: center;
+    flex-wrap: wrap;*/
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     background-color: rgba(0,0,0,0.2);
