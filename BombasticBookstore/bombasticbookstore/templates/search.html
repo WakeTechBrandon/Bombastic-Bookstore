@@ -1,41 +1,17 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     
     <title>Bombastic Bookstore Login Page</title>
-	<style>
-	* {
-	color: white;
-	}
-	main {
-	 padding: 100px;
-	 justify-content: center;
-	 position: fixed;
-	 top: 50%;
-	 left: 50%;
-	 width: 500px;
-	 transform: translate(-50%, -50%);
-	 background-color: rgba(11,11,11,1);
-	 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	 border-radius: 25px;
-	}
-	.container {
-		position: relative;
-		left: 20%;
-	}
-	h1 {
-		position: relative;
-		left: 10%;
-	}
-	</style>
-	
+	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
+	<link rel="stylesheet" href="{% static 'styles/theme.css' %}">
+	<script src="{% static 'js/theme.js' %}" defer></script>
 </head>
 <body>
 	<main>
-	<div class="container">
-		<h1>Search Page</h1>
-
+	<div class="card">
+		<h1 class="title">Search Page</h1>
 		<div class="search">
 			<form action="{% url 'search_results' %}" method="get" style="width: 100%;">
 				{{ form }}
