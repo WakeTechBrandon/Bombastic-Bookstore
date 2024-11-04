@@ -1,4 +1,7 @@
+{% extends "logo.html" %}
+
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +11,7 @@
 	<link rel="stylesheet" href="{% static 'styles/theme.css' %}">
 	<script src="{% static 'js/theme.js' %}" defer></script>
 </head>
-
+{% block content %}
 <body>
 <main>
 	
@@ -26,8 +29,8 @@
 
 			<button type="submit">Save changes</button>
 		</form>
-		<p><a href="{% url 'index' %}">Back to Main Menu</a></p>
 	</div>
 </main>
 </body>
+{% endblock %}
 </html>

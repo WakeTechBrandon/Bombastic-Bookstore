@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "logo.html" %}
 
 {% load static %}
 <!DOCTYPE html>
@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="{% static 'styles/theme.css' %}">
 	<script src="{% static 'js/theme.js' %}" defer></script>
 </head>
-<body>
 {% block content %}
+<body>
 <main>  
 	<div class="container">
 		<h1>Add a New Book</h1>
@@ -18,9 +18,8 @@
 			{{ form.as_p }}
 			<button type="submit">Add Book</button>
 		</form>
-		<p><a href="{% url 'index' %}">Back to Main Menu</a></p>
 	</div>
 </main>
-{% endblock %}
 </body>
+{% endblock %}
 </html>
