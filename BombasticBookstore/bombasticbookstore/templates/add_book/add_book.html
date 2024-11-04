@@ -1,16 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'logo.html' %}
 
 {% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Add Book</title>
+	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
 	<link rel="stylesheet" href="{% static 'styles/theme.css' %}">
 	<script src="{% static 'js/theme.js' %}" defer></script>
 </head>
 <body>
+	<header>
+	</header>
 {% block content %}
-<main>  
+<main>
+	
 	<div class="container">
 		<h1>Add a New Book</h1>
 		<form method="post">
@@ -20,6 +24,7 @@
 		</form>
 		<p><a href="{% url 'index' %}">Back to Main Menu</a></p>
 	</div>
+	
 </main>
 {% endblock %}
 </body>
