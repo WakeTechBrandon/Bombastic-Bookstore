@@ -1,100 +1,100 @@
 ,isbn10,title,author_first,author_last,categories,thumbnail,published_year,num_pages
-51,0582418275,The Firm,John,Grisham,Fiction,http://books.google.com/books/content?id=0qI5ngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1999,76
-10,0743477111,Romeo and Juliet,William,Shakespeare,Drama,http://books.google.com/books/content?id=1cEsNsWYbK4C&printsec=frontcover&img=1&zoom=1&source=gbs_api,1992,283
-43,0143038095,The Joy Luck Club,Amy,Tan,Fiction,http://books.google.com/books/content?id=2mgnEzzaJrIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2006,288
-52,0143037145,The Memory Keeper's Daughter,Kim,Edwards,Fiction,http://books.google.com/books/content?id=2yOkyAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,401
-58,0066238501,The Chronicles of Narnia (adult),C.S.,Lewis,Fiction,http://books.google.com/books/content?id=3VGkK_F9thYC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2001,767
-22,038549081X,The Handmaid's Tale,Margaret,Atwood,Fiction,http://books.google.com/books/content?id=4QXnYRaBUFAC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,344
-39,0521618746,Hamlet,William,Shakespeare,Juvenile Nonfiction,http://books.google.com/books/content?id=5m2UPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,289
-45,0349113912,Me Talk Pretty One Day,David,Sedaris,Education,http://books.google.com/books/content?id=5zGGPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,272
+94,0446696617,1st to Die,James,Patterson,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2005,424
+36,0553381695,A Clash of Kings,George,Martin,Fantasy Fiction,http://books.google.com/books/content?id=NnE07xtwhqYC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,969
+54,055358202X,A Feast for Crows,George,Martin,Fantasy Fiction,http://books.google.com/books/content?id=Uj6FDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,1061
+69,0743477545,A Midsummer Night's Dream,William,Shakespeare,Drama,http://books.google.com/books/content?id=axN5DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,1993,298
+98,0552135399,A Prayer for Owen Meany,John,Irving,Fiction,http://books.google.com/books/content?id=BrzEQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1990,637
+31,0141439602,A Tale of Two Cities,Charles,Dickens,Fiction,http://books.google.com/books/content?id=-SalMNeuN5sC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,489
+75,0061120073,A Tree Grows in Brooklyn,Betty,Smith,Fiction,http://books.google.com/books/content?id=Y-FZ9gRwMTYC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,496
+85,0307279464,A Walk in the Woods,Bill,Bryson,Fiction,http://books.google.com/books/content?id=TBJHPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2007,397
+33,0440498058,A Wrinkle in Time,Madeleine,L'Engle,Juvenile Fiction,http://books.google.com/books/content?id=JHXd-tEJSxsC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1973,211
+3,1416524797,Angels & Demons,Dan,Brown,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2006,736
+38,0451528824,Anne of Green Gables,Lucy,Montgomery,Fiction,http://books.google.com/books/content?id=n92H8Sb-tKgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,320
+80,0452011876,Atlas Shrugged,Ayn,Rand,Fiction,http://books.google.com/books/content?id=TecPMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1957,1168
+66,038572179X,Atonement,Ian,McEwan,Fiction,http://books.google.com/books/content?id=vZy0xrEHJRUC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,351
+91,1400033411,Beloved,Toni,Morrison,Fiction,http://books.google.com/books/content?id=Ann5ugJilcMC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2004,324
+18,0060929871,Brave New World,Aldous,Huxley,Fiction,http://books.google.com/books/content?id=-iU5Aq3WuGgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,288
+16,0064410935,Charlotte's Web (full color),E.B.,White,Juvenile Fiction,http://books.google.com/books/content?id=pylJbfNIwoIC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2001,184
+67,0061139378,Coraline,Neil,Gaiman,Fiction,http://books.google.com/books/content?id=pXlAY0XnrQUC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,162
 97,0451216954,Dark Lover,J.R.,Ward,Fiction,http://books.google.com/books/content?id=6dP7ngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,393
+28,0393970124,Dracula,Bram,Stoker,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,1997,488
+70,0142000655,East of Eden,John,Steinbeck,Fiction,http://books.google.com/books/content?id=R-5VFSu9aIkC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,601
+15,0143038419,"Eat, Pray, Love",Elizabeth,Gilbert,Biography & Autobiography,http://books.google.com/books/content?id=zquLDQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2007,368
 53,0141439580,Emma,Jane,Austen,Fiction,http://books.google.com/books/content?id=6-ndr-0EMycC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,474
+77,0618711651,Extremely Loud and Incredibly Close,Jonathan,Foer,Fiction,http://books.google.com/books/content?id=FHEy-iv2Y5IC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,326
+93,0679785892,Fear and Loathing in Las Vegas,Hunter,Thompson,Biography & Autobiography,http://books.google.com/books/content?id=VN-JDQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,204
+64,0393327345,Fight Club: A Novel,Chuck,Palahniuk,Fiction,http://books.google.com/books/content?id=SzfvHXu_5t8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2005,218
+73,0156030306,Flowers for Algernon,Daniel,Keyes,Fiction,http://books.google.com/books/content?id=NRWlitmahXkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2005,311
 25,0141439475,"Frankenstein, Or, The Modern Prometheus",Mary,Shelley,Fiction,http://books.google.com/books/content?id=6W24a29p9GQC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,335
 68,0060853980,Good Omens,Neil,Gaiman,Fiction,http://books.google.com/books/content?id=7erEbfDOcgkC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,412
-0,0439554934,Harry Potter and the Sorcerer's Stone (Book 1),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=9jA0BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,320
-91,1400033411,Beloved,Toni,Morrison,Fiction,http://books.google.com/books/content?id=Ann5ugJilcMC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2004,324
-69,0743477545,A Midsummer Night's Dream,William,Shakespeare,Drama,http://books.google.com/books/content?id=axN5DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,1993,298
-98,0552135399,A Prayer for Owen Meany,John,Irving,American fiction,http://books.google.com/books/content?id=BrzEQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1990,637
-19,0393978893,Wuthering Heights,Emily,Bronte,Fiction,http://books.google.com/books/content?id=dBKCQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,464
-72,0241003008,The Very Hungry Caterpillar,Eric,Carle,Babytime resource,http://books.google.com/books/content?id=DpGEQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1994,26
-56,031232118X,Something Borrowed,Emily,Giffin,Fiction,http://books.google.com/books/content?id=ekrNJWcrsvgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2004,322
-40,0307265439,The Road,Cormac,McCarthy,Fiction,http://books.google.com/books/content?id=eMq_lTq6fUgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,241
-92,0743477553,Othello,William,Shakespeare,Drama,http://books.google.com/books/content?id=f4zGDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,1993,314
-77,0618711651,Extremely Loud and Incredibly Close,Jonathan,Foer,Fiction,http://books.google.com/books/content?id=FHEy-iv2Y5IC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,326
-86,0091883768,Who Moved My Cheese?,Spencer,Johnson,Self-Help,http://books.google.com/books/content?id=G8J9RhbOTKQC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,96
-37,0786856866,"The Percy Jackson and the Olympians, Book Two: Sea of Monsters",Rick,Riordan,Juvenile Fiction,http://books.google.com/books/content?id=GqJZvgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,279
-50,0192833596,Great Expectations,Charles,Dickens,Fiction,http://books.google.com/books/content?id=HByVN01euAAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,1998,505
-62,0312360266,Marked,P.C. ,Cast,Juvenile Fiction,http://books.google.com/books/content?id=hcrXAQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2007,306
-48,0451207149,The pillars of the earth,Ken,Follett,Fiction,http://books.google.com/books/content?id=HdTZAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,973
-12,0307277674,Robert Langdon Novels,Dan,Brown,Art museum curators,http://books.google.com/books/content?id=hPbKKnD7qosC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,489
-61,0739461192,Marley and me : love and life with the world's worst dog,John,Grogan,Labrador retriever,http://books.google.com/books/content?id=IDUYoCOVRx8C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,291
-65,0440227534,Number the Stars,Lois,Lowry,Juvenile Fiction,http://books.google.com/books/content?id=IMZWoB8CWXMC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1989,137
-24,0439244196,Holes,Louis,Sachar,Blind,http://books.google.com/books/content?id=ISFr-QqgHUYC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,233
-18,0060929871,Brave New World,Aldous,Huxley,Fiction,http://books.google.com/books/content?id=-iU5Aq3WuGgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,288
-4,043965548X,Harry Potter and the Prisoner of Azkaban (Book 3),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=IZN5BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,435
-95,0439227143,The Call of the Wild,Jack,London,Juvenile Fiction,http://books.google.com/books/content?id=j6L-qusnoTUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2000,172
-47,0345339738,The Fellowship of the Ring,J.R.R.,Tolkien,Fantasy fiction,http://books.google.com/books/content?id=jECp6elJjE4C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2012,490
-29,0307275558,The Devil Wears Prada,Lauren,Weisberger,Fiction,http://books.google.com/books/content?id=jgnS-R9qNU8C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,432
-33,0440498058,A Wrinkle in Time,Madeleine,L'Engle,Juvenile Fiction,http://books.google.com/books/content?id=JHXd-tEJSxsC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1973,211
-57,0671727796,The Color Purple,Alice,Walker,Fiction,http://books.google.com/books/content?id=kCIGPi0G49cC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1985,295
-30,0375751513,The Picture of Dorian Gray,Oscar,Wilde,Fiction,http://books.google.com/books/content?id=kIcZKBNaQtIC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,367
-84,0451169514,It,Stephen,King,Fiction,http://books.google.com/books/content?id=kJtLVMg9_XQC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1990,1090
-74,0385494785,Into Thin Air,Jon,Krakauer,Biography & Autobiography,http://books.google.com/books/content?id=lI_2H3GUulEC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1999,368
-2,0618260307,"The Hobbit, Or, There and Back Again",J.R.R.,Tolkien,Juvenile Fiction,http://books.google.com/books/content?id=ljWL5A7D2JAC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2001,366
 90,0060775858,Goodnight Moon 60th Anniversary Edition,Margaret,Brown,Juvenile Fiction,http://books.google.com/books/content?id=lLYOrikgtJoC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,32
+50,0192833596,Great Expectations,Charles,Dickens,Fiction,http://books.google.com/books/content?id=HByVN01euAAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,1998,505
+46,0394800168,Green Eggs and Ham,Theodor,Seuss,Juvenile Fiction,http://books.google.com/books/content?id=VTolm6HG2EgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1960,62
+39,0521618746,Hamlet,William,Shakespeare,Drama,http://books.google.com/books/content?id=5m2UPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,289
+5,0439064864,Harry Potter and the Chamber of Secrets (Book 2),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=ZTE0BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,341
+8,0439785960,Harry Potter and the Half-Blood Prince (Book 6),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=QzI0BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,652
+7,0439358078,Harry Potter and the Order of the Phoenix (Book 5),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=OIJ5BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,870
+4,043965548X,Harry Potter and the Prisoner of Azkaban (Book 3),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=IZN5BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,435
+0,0439554934,Harry Potter and the Sorcerer's Stone (Book 1),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=9jA0BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,320
+24,0439244196,Holes,Louis,Sachar,Fiction,http://books.google.com/books/content?id=ISFr-QqgHUYC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,233
+76,0553279378,I Know why the Caged Bird Sings,Maya,Angelou,Biography & Autobiography,http://books.google.com/books/content?id=PohuyAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1993,289
+82,0439709105,Inkheart,Cornelia,Funke,Juvenile Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2005,563
+74,0385494785,Into Thin Air,Jon,Krakauer,Biography & Autobiography,http://books.google.com/books/content?id=lI_2H3GUulEC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1999,368
+84,0451169514,It,Stephen,King,Fiction,http://books.google.com/books/content?id=kJtLVMg9_XQC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1990,1090
+14,0142437204,Jane Eyre,Charlotte,Brontë,Fiction,http://books.google.com/books/content?id=wRYXFHqwW98C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,532
+89,0743223136,John Adams,David,McCullough,Biography & Autobiography,http://books.google.com/books/content?id=mtBkcldvD3cC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,751
+42,0451525264,Les Miserables a New Unabridged Translation,Victor,Hugo,Fiction,http://books.google.com/books/content?id=x1mNsVDyoSAC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1987,1463
+9,0140283331,Lord of the Flies,William,Golding,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,1999,182
+81,140003468X,Love in the Time of Cholera,Gabriel,Garcia-Marquez,Fiction,http://books.google.com/books/content?id=Z6uePwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,348
+41,0743477103,Macbeth,William,Shakespeare,Drama,http://books.google.com/books/content?id=wemvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2003,246
+62,0312360266,Marked,P.C. ,Cast,Juvenile Fiction,http://books.google.com/books/content?id=hcrXAQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2007,306
+61,0739461192,Marley and me : love and life with the world's worst dog,John,Grogan,Biography & Autobiography,http://books.google.com/books/content?id=IDUYoCOVRx8C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,291
+45,0349113912,Me Talk Pretty One Day,David,Sedaris,Comedy,http://books.google.com/books/content?id=5zGGPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,272
+49,0312422156,Middlesex,Jeffrey,Eugenides,Fiction,http://books.google.com/books/content?id=twDVs4UIU_kC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,529
+21,0743454537,My Sister's Keeper,Jodi,Picoult,Fiction,http://books.google.com/books/content?id=vGZSso_uyWsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2005,423
+65,0440227534,Number the Stars,Lois,Lowry,Juvenile Fiction,http://books.google.com/books/content?id=IMZWoB8CWXMC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1989,137
+44,0060531045,One Hundred Years of Solitude,Gabriel,Garcia-Marquez,Fiction,http://books.google.com/books/content?id=pgPWOaOctq8C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,417
+92,0743477553,Othello,William,Shakespeare,Drama,http://books.google.com/books/content?id=f4zGDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,1993,314
 35,0440242940,Outlander,Diana,Gabaldon,Fiction,http://books.google.com/books/content?id=lmFKUOJbXiEC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,850
 59,0192802631,Persuasion,Jane,Austen,Fiction,http://books.google.com/books/content?id=lpD5anvUaRUC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2004,249
-34,0751529818,Tuesdays with Morrie,Mitch,Albom,Amyotrophic lateral sclerosis,http://books.google.com/books/content?id=LXkCKQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,210
-17,1565125606,Water for Elephants,Sara,Gruen,Fiction,http://books.google.com/books/content?id=M8xNxgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2007,335
-89,0743223136,John Adams,David,McCullough,Biography & Autobiography,http://books.google.com/books/content?id=mtBkcldvD3cC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,751
-60,0743227441,The Other Boleyn Girl,Philippa,Gregory,Fiction,http://books.google.com/books/content?id=mx8-sy_e6r8C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2001,661
-38,0451528824,Anne of Green Gables,Lucy,Montgomery,Fiction,http://books.google.com/books/content?id=n92H8Sb-tKgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,320
-36,0553381695,A Clash of Kings,George,Martin,Fiction,http://books.google.com/books/content?id=NnE07xtwhqYC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,969
-88,0061142026,Stardust,Neil,Gaiman,Fiction,http://books.google.com/books/content?id=NQ_cSYevzAEC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,248
-73,0156030306,Flowers for Algernon,Daniel,Keyes,Fiction,http://books.google.com/books/content?id=NRWlitmahXkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2005,311
-63,0743269519,The 7 Habits of Highly Effective People,Stephen,Covey,Self-Help,http://books.google.com/books/content?id=NWN2xAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2004,372
-27,0517189607,The Secret Garden,Frances,Burnett,Juvenile Fiction,http://books.google.com/books/content?id=oGNbnTQdiJ4C&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,331
-7,0439358078,Harry Potter and the Order of the Phoenix (Book 5),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=OIJ5BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,870
+12,0307277674,Da Vinci Code,Dan,Brown,Fiction,http://books.google.com/books/content?id=hPbKKnD7qosC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,489
+10,0743477111,Romeo and Juliet,William,Shakespeare,Drama,http://books.google.com/books/content?id=1cEsNsWYbK4C&printsec=frontcover&img=1&zoom=1&source=gbs_api,1992,283
 87,0671021001,She's Come Undone,Wally,Lamb,Fiction,http://books.google.com/books/content?id=Oj3qixCHJNMC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,465
-13,0385732554,The Giver,Lois,Lowry,Juvenile Fiction,http://books.google.com/books/content?id=oZRlYDfxXpQC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,208
-44,0060531045,One Hundred Years of Solitude,Gabriel,Garcia-Marquez,Fiction,http://books.google.com/books/content?id=pgPWOaOctq8C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,417
-78,0385339704,The Pelican Brief,John,Grisham,Fiction,http://books.google.com/books/content?id=pNyk1XwS9rwC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,400
-76,0553279378,I Know why the Caged Bird Sings,Maya,Angelou,Biography & Autobiography,http://books.google.com/books/content?id=PohuyAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1993,289
+56,031232118X,Something Borrowed,Emily,Giffin,Fiction,http://books.google.com/books/content?id=ekrNJWcrsvgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2004,322
+88,0061142026,Stardust,Neil,Gaiman,Fiction,http://books.google.com/books/content?id=NQ_cSYevzAEC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,248
+63,0743269519,The 7 Habits of Highly Effective People,Stephen,Covey,Self-Help,http://books.google.com/books/content?id=NWN2xAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2004,372
 11,0061122416,The Alchemist,Paulo,Coelho,Fiction,http://books.google.com/books/content?id=pTr44Sx6oWQC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,197
-67,0061139378,Coraline,Neil,Gaiman,Fiction,http://books.google.com/books/content?id=pXlAY0XnrQUC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,162
-16,0064410935,Charlotte's Web (full color),E.B.,White,Juvenile Fiction,http://books.google.com/books/content?id=pylJbfNIwoIC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2001,184
-79,0451528557,The Time Machine,H.G.,Wells,Fiction,http://books.google.com/books/content?id=QheiKTNdrQoC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,118
-8,0439785960,Harry Potter and the Half-Blood Prince (Book 6),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=QzI0BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,652
-70,0142000655,East of Eden,John,Steinbeck,Fiction,http://books.google.com/books/content?id=R-5VFSu9aIkC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,601
-32,0345418263,The Princess Bride,William,Goldman,Fiction,http://books.google.com/books/content?id=RkFBPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,398
-6,0618346252,The Fellowship of the Ring,J.R.R.,Tolkien,Fiction,http://books.google.com/books/content?id=S35cUR-u4y4C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,398
-31,0141439602,A Tale of Two Cities,Charles,Dickens,Fiction,http://books.google.com/books/content?id=-SalMNeuN5sC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,489
-55,0312353766,The Red Tent,Anita,Diamant,Fiction,http://books.google.com/books/content?id=Saqfl3hXqfEC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,336
-64,0393327345,Fight Club: A Novel,Chuck,Palahniuk,Fiction,http://books.google.com/books/content?id=SzfvHXu_5t8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2005,218
-85,0307279464,A Walk in the Woods,Bill,Bryson,Sports & Recreation,http://books.google.com/books/content?id=TBJHPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2007,397
-80,0452011876,Atlas Shrugged,Ayn,Rand,Capitalism,http://books.google.com/books/content?id=TecPMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1957,1168
-96,0590032496,The witches,Roald,Dahl,Juvenile Nonfiction,http://books.google.com/books/content?id=tpQxolGFYSkC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1997,208
-23,0450040186,The Shining,Stephen,King,Boys,http://books.google.com/books/content?id=tVt-uQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1977,447
-49,0312422156,Middlesex,Jeffrey,Eugenides,Fiction,http://books.google.com/books/content?id=twDVs4UIU_kC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,529
+95,0439227143,The Call of the Wild,Jack,London,Juvenile Fiction,http://books.google.com/books/content?id=j6L-qusnoTUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2000,172
+58,0066238501,The Chronicles of Narnia (adult),C.S.,Lewis,Fiction,http://books.google.com/books/content?id=3VGkK_F9thYC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2001,767
 71,0385339089,The Client,John,Grisham,Fiction,http://books.google.com/books/content?id=u61XH0OJ5AUC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,483
-54,055358202X,A Feast for Crows,George,Martin,Fiction,http://books.google.com/books/content?id=Uj6FDwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,1061
-26,074324754X,The Glass Castle,Jeannette,Walls,Biography & Autobiography,http://books.google.com/books/content?id=V8kznwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,288
-21,0743454537,My Sister's Keeper,Jodi,Picoult,Fiction,http://books.google.com/books/content?id=vGZSso_uyWsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2005,423
-93,0679785892,Fear and Loathing in Las Vegas,Hunter,Thompson,Biography & Autobiography,http://books.google.com/books/content?id=VN-JDQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,204
-46,0394800168,Green Eggs and Ham,Theodor,Seuss,Juvenile Fiction,http://books.google.com/books/content?id=VTolm6HG2EgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1960,62
-66,038572179X,Atonement,Ian,McEwan,Fiction,http://books.google.com/books/content?id=vZy0xrEHJRUC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,351
-41,0743477103,Macbeth,William,Shakespeare,Drama,http://books.google.com/books/content?id=wemvDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2003,246
-14,0142437204,Jane Eyre,Charlotte,Brontë,Fiction,http://books.google.com/books/content?id=wRYXFHqwW98C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,532
-42,0451525264,Les Miserables a New Unabridged Translation,Victor,Hugo,Fiction,http://books.google.com/books/content?id=x1mNsVDyoSAC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1987,1463
-75,0061120073,A Tree Grows in Brooklyn,Betty,Smith,Fiction,http://books.google.com/books/content?id=Y-FZ9gRwMTYC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,496
-81,140003468X,Love in the Time of Cholera,Gabriel,Garcia-Marquez,Fiction,http://books.google.com/books/content?id=Z6uePwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,348
-83,0143034901,The Shadow of the Wind,Carlos,Ruiz,Fiction,http://books.google.com/books/content?id=zQJSrGnJwCcC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,487
-15,0143038419,"Eat, Pray, Love",Elizabeth,Gilbert,Biography & Autobiography,http://books.google.com/books/content?id=zquLDQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2007,368
-5,0439064864,Harry Potter and the Chamber of Secrets (Book 2),J.K.,Rowling,Juvenile Fiction,http://books.google.com/books/content?id=ZTE0BgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2015,341
-1,0316015849,Twilight,Stephenie,Meyer,Young Adult Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2006,498
-3,1416524797,Angels & Demons,Dan,Brown,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2006,736
-9,0140283331,Lord of the Flies,William,Golding,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,1999,182
+57,0671727796,The Color Purple,Alice,Walker,Fiction,http://books.google.com/books/content?id=kCIGPi0G49cC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1985,295
 20,1400032717,The curious incident of the dog in the night-time,Mark,Haddon,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2003,226
-28,0393970124,Dracula,Bram,Stoker,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,1997,488
-82,0439709105,Inkheart,Cornelia,Funke,Juvenile Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2005,563
-94,0446696617,1st to Die,James,Patterson,Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2005,424
+29,0307275558,The Devil Wears Prada,Lauren,Weisberger,Fiction,http://books.google.com/books/content?id=jgnS-R9qNU8C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,432
+47,0345339738,The Fellowship of the Ring,J.R.R.,Tolkien,Fantasy fiction,http://books.google.com/books/content?id=jECp6elJjE4C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2012,490
+6,0618346252,The Fellowship of the Ring,J.R.R.,Tolkien,Fantasy fiction,http://books.google.com/books/content?id=S35cUR-u4y4C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,398
+51,0582418275,The Firm,John,Grisham,Fiction,http://books.google.com/books/content?id=0qI5ngEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1999,76
+13,0385732554,The Giver,Lois,Lowry,Juvenile Fiction,http://books.google.com/books/content?id=oZRlYDfxXpQC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,208
+26,074324754X,The Glass Castle,Jeannette,Walls,Biography & Autobiography,http://books.google.com/books/content?id=V8kznwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,288
+22,038549081X,The Handmaid's Tale,Margaret,Atwood,Fiction,http://books.google.com/books/content?id=4QXnYRaBUFAC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,344
+2,0618260307,"The Hobbit, Or, There and Back Again",J.R.R.,Tolkien,Juvenile Fiction,http://books.google.com/books/content?id=ljWL5A7D2JAC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2001,366
+43,0143038095,The Joy Luck Club,Amy,Tan,Fiction,http://books.google.com/books/content?id=2mgnEzzaJrIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api,2006,288
+52,0143037145,The Memory Keeper's Daughter,Kim,Edwards,Fiction,http://books.google.com/books/content?id=2yOkyAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,401
+60,0743227441,The Other Boleyn Girl,Philippa,Gregory,Fiction,http://books.google.com/books/content?id=mx8-sy_e6r8C&printsec=frontcover&img=1&zoom=1&source=gbs_api,2001,661
+78,0385339704,The Pelican Brief,John,Grisham,Fiction,http://books.google.com/books/content?id=pNyk1XwS9rwC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,400
+37,0786856866,"The Percy Jackson and the Olympians, Book Two: Sea of Monsters",Rick,Riordan,Juvenile Fiction,http://books.google.com/books/content?id=GqJZvgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,279
+30,0375751513,The Picture of Dorian Gray,Oscar,Wilde,Fiction,http://books.google.com/books/content?id=kIcZKBNaQtIC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,367
+48,0451207149,The pillars of the earth,Ken,Follett,Fiction,http://books.google.com/books/content?id=HdTZAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,973
+32,0345418263,The Princess Bride,William,Goldman,Fiction,http://books.google.com/books/content?id=RkFBPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,398
+55,0312353766,The Red Tent,Anita,Diamant,Fiction,http://books.google.com/books/content?id=Saqfl3hXqfEC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,336
+40,0307265439,The Road,Cormac,McCarthy,Fiction,http://books.google.com/books/content?id=eMq_lTq6fUgC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2006,241
+27,0517189607,The Secret Garden,Frances,Burnett,Juvenile Fiction,http://books.google.com/books/content?id=oGNbnTQdiJ4C&printsec=frontcover&img=1&zoom=1&source=gbs_api,1998,331
+83,0143034901,The Shadow of the Wind,Carlos,Ruiz,Fiction,http://books.google.com/books/content?id=zQJSrGnJwCcC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2005,487
+23,0450040186,The Shining,Stephen,King,Fiction,http://books.google.com/books/content?id=tVt-uQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1977,447
+79,0451528557,The Time Machine,H.G.,Wells,Fiction,http://books.google.com/books/content?id=QheiKTNdrQoC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,118
+72,0241003008,The Very Hungry Caterpillar,Eric,Carle,Babytime resource,http://books.google.com/books/content?id=DpGEQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,1994,26
+96,0590032496,The witches,Roald,Dahl,Fiction,http://books.google.com/books/content?id=tpQxolGFYSkC&printsec=frontcover&img=1&zoom=1&source=gbs_api,1997,208
+34,0751529818,Tuesdays with Morrie,Mitch,Albom,Fiction,http://books.google.com/books/content?id=LXkCKQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,210
+1,0316015849,Twilight,Stephenie,Meyer,Young Adult Fiction,https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg,2006,498
+17,1565125606,Water for Elephants,Sara,Gruen,Fiction,http://books.google.com/books/content?id=M8xNxgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2007,335
+86,0091883768,Who Moved My Cheese?,Spencer,Johnson,Self-Help,http://books.google.com/books/content?id=G8J9RhbOTKQC&printsec=frontcover&img=1&zoom=1&source=gbs_api,2002,96
+19,0393978893,Wuthering Heights,Emily,Bronte,Fiction,http://books.google.com/books/content?id=dBKCQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api,2003,464
