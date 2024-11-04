@@ -139,3 +139,6 @@ def about(request):
         {'name': 'Julia McDonald'},
     ]
     return render(request, 'about.html', {'team_members': team_members})
+
+def login(request): 
+    return render(request, 'login.html')

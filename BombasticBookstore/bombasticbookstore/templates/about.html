@@ -1,35 +1,14 @@
+{% extends 'logo.html' %}
+
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Add Book</title>
-	<style>
-	* {
-	color: white;
-	}
-	main {
-	 padding: 100px;
-	 justify-content: center;
-	 position: fixed;
-	 top: 50%;
-	 left: 50%;
-	 width: 500px;
-	 transform: translate(-50%, -50%);
-	 background-color: rgba(11,11,11,1);
-	 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	 border-radius: 25px;
-	}
-	.container {
-		position: relative;
-		left: 20%;
-	}
-	h1 {
-		position: relative;
-		left: 10%;
-	}
-	</style>
 </head>
+{% block content %}
 <main>
-<h1>About Us: Group 2</h1>
+<h1 class="title">About Us: Group 2</h1>
 <p>Welcome to our about page! This website was created by our group for our CSC.289.0001 Capstone Project as part of our coursework at Wake Tech Community College.</p>
 
 <h2>Meet Our Team</h2>
@@ -38,7 +17,7 @@
     <li>{{ team_member.name }}</li>
   {% endfor %}
 </ul>
-<p><a href="{% url 'index' %}">Back to Main Menu</a></p>
 </main>
 </body>
 </html>
+{% endblock %}

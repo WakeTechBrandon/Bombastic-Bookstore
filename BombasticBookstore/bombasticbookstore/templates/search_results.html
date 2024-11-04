@@ -1,66 +1,54 @@
+{% extends "logo.html" %}
 
+{% load static %}
+ 
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-	<!-- .media{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start} -->
+	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+    <script src="{% static 'js/theme.js' %}" defer></script>
+    <!-- .media{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start} -->
 	<!-- .media-body{-ms-flex:1;flex:1} -->
-	<style>
-		.card {
-			/* Add shadows to create the "card" effect */
-			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-			transition: 0.3s;
-			background-color: rgba(0,0,0,0.2);
-			border-radius: 25px;
-		}
-		/* On mouse-over, add a deeper shadow */
-		.card:hover {
-		background-color: white;
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-		}
-	</style>
-
 </head>
-
+{% block content %}
 <body>
-<div style="background-color:powderblue; position:sticky; top:0;">
-  <h1 align="center">Search Results</h1>
-</div>
-<br>
-<ul>
-    {% for book in object_list %}
-
-	<div class="card">
-      <div class="media">
-        <img src="{{ book.thumbnail }}" height="192px" width="128px" > 
-        <div class="media-body">
-        <ul>
-          <b>ISBN:</b> {{ book.isbn10 }} <br> 
-          <b>Title:</b> {{ book.title }}<br> 
-          <b>Author:</b> {{ book.author_first }} {{ book.author_last }}<br> 
-          <b>Category:</b> {{ book.categories }}<br>
-          <b>Pub year:</b> {{ book.published_year }}<br>
-          <b>Pages:</b> {{ book.num_pages }}<br>
-          <b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}">{{book.book_id.quantity}}</a><br>
-           
-           
-           {% if book.isbn10 %}
-           <a href="{% url 'confirm_remove_item' book.isbn10 %}" onclick="return confirm('Are you sure you want to remove this book?');">
-              <b>*Remove*</b>
-           </a>
-           {% else %}
-           <p>ISBN not available</p>
-           {% endif %}
-         </li>
-           <br>
-           
-        </ul>
-        </div>
-        <br>
-      </div>
+	<br>
+	<ul>
+		{% for book in object_list %}
+	<div>
+		<div class="search-card">
+		  <div class="media" style="display: flex;">
+			<img src="{{ book.thumbnail }}" height="192px" width="128px" > 
+			<div class="media-body" style="margin-top: auto; margin-bottom: auto;">
+				<ul>
+				  <li><b>ISBN:</b> {{ book.isbn10 }}</li>
+				  <li><b>Title:</b> {{ book.title }}</li>
+				  <li><b>Author:</b> {{ book.author_first }} {{ book.author_last }}</li> 
+				  <li><b>Category:</b> {{ book.categories }}</li>
+				  <li><b>Pub year:</b> {{ book.published_year }}</li>
+				  <li><b>Pages:</b> {{ book.num_pages }}</li>
+				  <li><b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}">{{book.book_id.quantity}}</a></li>
+				  <li>
+				   {% if book.isbn10 %}
+					<a href="{% url 'confirm_remove_item' book.isbn10 %}" onclick="return confirm('Are you sure you want to remove this book?');">
+					  <b>*Remove*</b>
+					</a>
+				   {% else %}
+					<p>ISBN not available</p>
+				   {% endif %}
+				  </li>
+				</ul>
+			</div>
+			<br>
+		  </div>
+		</div>
 	</div>
       <br>
         {% endfor %}
     </ul>
 </body>
 </html>
+{% endblock %}

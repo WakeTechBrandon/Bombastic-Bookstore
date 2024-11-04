@@ -1,3 +1,7 @@
+{% extends "logo.html" %}
+
+{% load static %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,70 +9,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Filter Form</title>
+    <link rel="stylesheet" href="{% static 'styles/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+    <script src="{% static 'js/theme.js' %}" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
-  <body>
-    <div style="background-color:powderblue; position:sticky; top:0;">
-    <h1 align="center">Store Inventory</h1>
-    <form method="GET" action=".">
-    <div class="row justify-content-center">
-    <div class="form-group col-md-2">
-        <label for="category"><em>Category</em></label>
-        <select id="category" class="form-control" name="category">
-        <option selected>Choose...</option>
-        {% for cat in categories %}
-            {% for i in cat.values %}
-        <option value="{{ i }}">{{ i }}</option>
-        {% endfor %}
-        {% endfor %}
-        </select> 
-    </div>
-    <div class="form-group col-sm-2"><div style="position: absolute;top:35%;left:50%"></div></div>
-    <div class="form-group col-md-2">
-        <label for="author"><em>Author</em></label>
-        <select id="author" class="form-control" name="author">
-        <option selected>Choose...</option>
-        {% for aut in authors %}
-            {% for i in aut.values %}
-        <option value="{{ i }}">{{ i }}</option>
-        {% endfor %}
-        {% endfor %}
-        </select>
-        <br></div>
-        <div class="form-group col-sm-1"><div style="position: absolute;top:35%;right:0">
-        <div class="form-check" >
-          <input class="form-check-input" type="checkbox" id="in-stock" name="in-stock">
-          <label class="form-check-label" for="in-stock">
-            In-Stock only
-          </label>
-        </div></div></div>
-        <div class="form-group col-sm-1"><div style="position: absolute;top:35%;right:0"><button type="submit" class="btn btn-primary">Search</button> </div></div><br>
-    </div></div>
-    </form>
-
-    <div align="center">Filtered by:  <b>{{flagcat}},{{flagauth}},  {{instock}}</b></div>
-    <ul>
-    <div id="container" style=" margin:0px ; column-count:3 ;min-width: 180px; column-gap: 20px;padding:20px;break-inside: avoid;">
+{% block content %}
+<body>
+    <div class="header">
+		<h1 align="center">Store Inventory</h1>
+		<form method="GET" action=".">
+			<div class="row justify-content-center">
+				<div class="form-group col-md-2">
+					<label for="category"><em>Category</em></label>
+					<select id="category" class="form-control" name="category">
+						<option selected>Choose...</option>
+						{% for cat in categories %}
+							{% for i in cat.values %}
+								<option value="{{ i }}">{{ i }}</option>
+							{% endfor %}
+						{% endfor %}
+					</select> 
+				</div>
+				<div class="form-group col-sm-2">
+					<div style="position: absolute;top:35%;left:50%"></div>
+				</div>
+				<div class="form-group col-md-2">
+					<label for="author"><em>Author</em></label>
+					<select id="author" class="form-control" name="author">
+						<option selected>Choose...</option>
+						{% for aut in authors %}
+							{% for i in aut.values %}
+								<option value="{{ i }}">{{ i }}</option>
+							{% endfor %}
+						{% endfor %}
+					</select>
+					<br>
+				</div>
+				<div class="form-group col-sm-1"  style="display: block; float:right;">
+					<div>
+						<div class="form-check" >
+						  <input class="form-check-input" type="checkbox" id="in-stock" name="in-stock">
+						  <label class="form-check-label" for="in-stock">
+							In-Stock only
+						  </label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group col-sm-1" style="float:right;">
+					<div>
+						<button type="submit" class="btn btn-primary">Search</button> 
+					</div>
+				</div><br>
+				<div align="center">Filtered by:  <b>{{flagcat}},{{flagauth}},  {{instock}}</b></div>
+			</div>
+		</form>
+	</div>
+	
+<div id="container" style=" margin:0px ; column-count:3 ;min-width: 33%; column-gap: 20px;padding:20px;break-inside: avoid;"> 
+    <ul style="position: relative; height 100%; width: 100%">
         {% for book in queryset %}
-        <div style="padding:10px">
-            <div class="media" style="border: 1px solid;font-size: 1.7vh;padding: 10px;break-inside: avoid;">
-            <br>
-            <img src="{{ book.thumbnail }}" height="192px" width="128px"> 
-            <div class="media-body">
-            <ul>
-                <b>ISBN:</b> {{ book.isbn10 }} <br> 
-                <b>Title:</b> {{ book.title }}<br> 
-                <b>Author:</b> {{ book.author_first }} {{ book.author_last }}<br> 
-                <b>Category:</b> {{ book.categories }}<br>
-                <b>Pub year:</b> {{ book.published_year }}<br>
-                <b>Pages:</b> {{ book.num_pages }}<br>
-                <b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}">{{book.book_id.quantity}}</a><br>
-            </ul>
-            </div>
+        <div class="search-card" style="padding:10px; display:inline-block; border: 1px solid;">
+            <div class="media" style="min-height: 300px; display: flex; font-size: 1.7vh; padding: 10px; break-inside: avoid;">
+				<br>
+				<img src="{{ book.thumbnail }}" height="192px" width="128px"> 
+				<div class="media-body" style="text-align:left; display: inline-block">
+					<ul>
+						<li><b>ISBN:</b> <span style="font-size: 1.4vh;"> {{ book.isbn10 }} </span></li>
+						<li><b>Title:</b> <span style="font-size: 1.4vh;">{{ book.title }}</span></li>
+						<li><b>Author:</b> <span style="font-size: 1.4vh;">{{ book.author_first }} {{ book.author_last }}</span></li>
+						<li><b>Category:</b> <span style="font-size: 1.4vh;">{{ book.categories }}</span></li>
+						<li><b>Pub year:</b> <span style="font-size: 1.4vh;">{{ book.published_year }}</span></li>
+						<li><b>Pages:</b> <span style="font-size: 1.4vh;">{{ book.num_pages }}</span></li>
+						<li><b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}"><span style="font-size: 1.4vh;">{{book.book_id.quantity}}</span></a></li>
+					</ul>
+				</div>
             </div>
         </div>
         {% endfor %}
-        </div>
-        </ul>
-    </div>
+    </ul>
+</div>
+</body>
+{% endblock %}
+</html>
