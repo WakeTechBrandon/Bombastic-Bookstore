@@ -1,19 +1,19 @@
 main {
   color: white;
   padding: 100px;
+  padding-top: 50px;
   /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
   position: fixed;
-  margin-top: 200px;
+  margin-top: 150px;
   top: 50%;
   left: 50%;
-  width: 1000px;
+  width: 400px;
   transform: translate(-50%, -50%);
   background-color: rgba(11,11,11,1);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 25px;
-  padding: 100px;
 }
 
 .main{
@@ -43,6 +43,7 @@ main {
 
 .container {
 	position: relative;
+  text-align: center;
 }
 
 h1 {
