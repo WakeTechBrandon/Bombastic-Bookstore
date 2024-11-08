@@ -6,19 +6,11 @@ body.light
 
 } 
 
-.search-card.light {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 25px;
-  }
-
-.search-card.light:hover {
+header.light
+{
     background-color: white;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-
+    color: black;
+}
 /* Dark Theme */ 
 body.dark 
 { 
@@ -26,15 +18,8 @@ body.dark
     color: white; 
 }
 
-div.dark {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 25px;
-  }
-
-div.dark:hover {
+header.dark
+{
     background-color: black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
+    color: white;
+}
