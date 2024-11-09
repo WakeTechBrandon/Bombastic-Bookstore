@@ -7,17 +7,22 @@
     <title>Add Book</title>
 </head>
 {% block content %}
-<main>
-<h1 class="title">About Us: Group 2</h1>
-<p>Welcome to our about page! This website was created by our group for our CSC.289.0001 Capstone Project as part of our coursework at Wake Tech Community College.</p>
+</body>
+	<main>
+		<h1 class="title">About Us: Group 2</h1>
+		<p>Welcome to our about page! This website was created by our group for our CSC.289.0001 Capstone Project as part of our coursework at Wake Tech Community College.</p>
 
-<h2>Meet Our Team</h2>
-<ul>
-  {% for team_member in team_members %}
-    <li>{{ team_member.name }}</li>
-  {% endfor %}
-</ul>
-</main>
+		<h2>Meet Our Team</h2>
+		<ul>
+		  {% for team_member in team_members %}
+			<li>{{ team_member.name }}</li>
+		  {% endfor %}
+		</ul>
+		
+		<div style="float:right;">
+			<img class="eagle-logo" src='{% static "./bombastic.png" %}' alt="Bombastic Bookstore Wake Tech Logo">
+		</div>
+	</main>
 </body>
 </html>
 {% endblock %}
