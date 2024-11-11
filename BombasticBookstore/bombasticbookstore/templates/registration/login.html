@@ -64,7 +64,7 @@
 	<div class="sign-up">
 		<span class="toggle-switch opt2">
 			<h2>Sign Up</h2>
-			<form action="signup.php" method="post">
+			<!-- <form action="signup.php" method="post">
 				<label for="name">Name:</label>
 				<input type="text" id="name" name="name"><br><br>
 				<label for="email">Email:</label>
@@ -83,14 +83,14 @@
 						{% endfor %}
 					{% endfor %}
 				</ul>
-			{% endif %}
+			{% endif %} -->
 		</span>
     </div> <!-- Sign up -->
 	<p style="display:flex; justify-content: center;">OR</p>
 	<div style="display:flex; justify-content:center; padding: 25px;">
 		<input class="toggle-checkbox" type="checkbox" id="toggle">
 		<label class="slider" for="toggle">
-			<span class="toggle-switch opt1 toggle-label">New User? Sign Up</span>
+			<span class="toggle-switch opt1 toggle-label"><a href="{% url 'signup' %}">New User? Sign Up </a></span>
 			<span class="toggle-switch opt2 toggle-label">Login</span>
 		</label>
 	</div>
