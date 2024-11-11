@@ -1,13 +1,20 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import FormView, ListView, CreateView
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, UserModel
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import SearchForm, BookForm,BookQtyForm
 from .models import Book, BookQuantity
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from django.db.models import F
+from django.contrib.auth.models import User
+
+def report(request):
+    """
+    returns a log of all registered users with date joined and last login
+    """
+    all_users = User.objects.values()
+    return render(request, 'report.html',{'users':all_users})
 
 class HomepageView(LoginRequiredMixin, ListView):
     model = Book
@@ -46,6 +53,9 @@ def add_book(request):
 
 
 def adjust_qty(request, id):
+    """
+    loads form page to allow qty edits
+    """
     book = Book.objects.select_related("book_id").get(id=id)
     template = loader.get_template("adjust_qty.html")
     context = {
@@ -55,6 +65,9 @@ def adjust_qty(request, id):
 
 
 def update_record(request, id):
+    """
+    allows integer updates to book quantities and saves to db
+    """
     try:
         qty = int(request.POST["qty"])
     except ValueError:
@@ -65,21 +78,13 @@ def update_record(request, id):
     q.save()
     return HttpResponseRedirect(reverse("index"))
 
-#
-#def view_all(request):
-
-    #books = Book.objects.select_related("book_id").all()
-    #title_contains_query = request.GET.get('title_contains')
-    #myFilter = BookFilter(request.GET, queryset=books)
-    #books = myFilter.qs
-    #context = {"books": books, "myFilter": myFilter}
-    #context = {'queryset':books}
-    #return render(request, "view_all.html", context)
-
 def is_valid_queryparam(param):
     return param != '' and param is not None
     
 def filter(request):
+    """
+    allows the view all page to filter by author/category and whether quantity is > 0 (in stock)
+    """
     qs= Book.objects.all()
     authors = request.GET.get('author')
     category = request.GET.get('category')
@@ -96,15 +101,17 @@ def filter(request):
         qs = qs.filter(book_id__quantity__gt=0)
         toggle="in stock"
     else: toggle =" "
-        #qs = Book.objects.raw("Select a.id,a.categories, a.author_last, a.title, b.quantity from book_app_book a, book_app_bookquantity b where b.quantity >0")
+      
      
     return qs,flag_auth,flag_cat, toggle
 
 def BootstrapFilterView(request):
+    """
+    view all page that populates optional filters with author last name and category.
+    """
     qs,flag_auth,flag_cat, toggle = filter(request)
     cats = Book.objects.select_related('book_id').values('categories').distinct()
     authors = Book.objects.values('author_last').distinct()
-    #count= BookQuantity.objects.values('quantity')
     context = {
         'flagcat':flag_cat,
         'flagauth':flag_auth,

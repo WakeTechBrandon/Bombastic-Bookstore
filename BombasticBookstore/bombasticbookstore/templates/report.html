@@ -1,0 +1,51 @@
+{% extends "logo.html" %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User report</title>
+</head>
+{% block content %}
+<body>
+<style>
+    table, th, td {
+  border: 1px solid black;
+}
+td:nth-child(even), th:nth-child(even) {
+  background-color: #dfebeb;
+}
+td:nth-child(odd), th:nth-child(odd) {
+  background-color: #afb2b6;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+<br>
+<table style align="center">
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Last login</th>
+        <th>Date joined</th>
+        <th>Admin user</th>
+    </tr>
+    
+
+    {% for i in users %}
+    <tr>
+        <td>{{i.username}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.last_login}}</td>
+        <td>{{i.date_joined}}</td>
+        <td>{{i.is_superuser}}</td>  
+    </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

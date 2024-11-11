@@ -21,4 +21,5 @@ urlpatterns = [
     path('inventory/delete/<str:isbn>/', confirm_remove_item, name='confirm_remove_item'),  
     path('inventory/delete/confirm/<str:isbn>/', delete_item, name='delete_item'),  
     path('about/', views.about, name='about'),
+    path('report/',views.report,name='report')
 ]
