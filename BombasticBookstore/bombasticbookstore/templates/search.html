@@ -10,10 +10,10 @@
     <title>Bombastic Bookstore Login Page</title>
 	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
 	<link rel="stylesheet" href="{% static 'styles/theme.css' %}">
-	<script src="{% static 'js/theme.js' %}" defer></script>
 </head>
-{% block content %}
-<body>
+
+<body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
+	{% block content %}
 	<main>
 	<div class="card">
 		<h1 class="title">Search Page</h1>
@@ -24,6 +24,7 @@
 		</div>
 	</div> <!-- Container -->
 	</main>
+	{% endblock %}
 </body>
 </html>
-{% endblock %}
+

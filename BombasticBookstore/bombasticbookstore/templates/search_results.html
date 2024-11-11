@@ -9,13 +9,12 @@
 	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
     <link rel="stylesheet" href="{% static 'styles/theme.css' %}">
     <link rel="stylesheet" href="{% static 'styles/header.css' %}">
-    <script src="{% static 'js/theme.js' %}" defer></script>
     <!-- .media{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start} -->
 	<!-- .media-body{-ms-flex:1;flex:1} -->
 </head>
-{% block content %}
-<body>
-	<br>
+
+<body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
+	{% block content %}
 	<ul>
 		{% for book in object_list %}
 	<div>
@@ -49,6 +48,6 @@
       <br>
         {% endfor %}
     </ul>
+	{% endblock %}
 </body>
 </html>
-{% endblock %}

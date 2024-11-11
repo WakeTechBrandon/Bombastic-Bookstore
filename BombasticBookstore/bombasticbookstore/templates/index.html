@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bombastic Bookstore Inventory Management Tool</title>
 </head>
-{% block content %}
-<body>
+
+<body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
-{% endblock %}

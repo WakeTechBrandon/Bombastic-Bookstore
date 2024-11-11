@@ -1,25 +1,31 @@
-/* Light Theme */ 
-body.light 
-{ 
-    background-color: white; 
-    color: black; 
-
-} 
-
-header.light
-{
+/* Light Theme */
+body.light {
     background-color: white;
     color: black;
 }
-/* Dark Theme */ 
-body.dark 
-{ 
-    background-color: black; 
-    color: white; 
+
+header.light {
+    background-color: white;
+    color: black;
 }
 
-header.dark
-{
+.theme-dependent.light {
+    background-color: white;
+    color: black;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+header.dark {
+    background-color: black;
+    color: white;
+}
+
+.theme-dependent.dark {
     background-color: black;
     color: white;
 }
