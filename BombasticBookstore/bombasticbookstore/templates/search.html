@@ -6,16 +6,13 @@
 
 <html>
 <head>
-    
     <title>Bombastic Bookstore Login Page</title>
-	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
-	<link rel="stylesheet" href="{% static 'styles/theme.css' %}">
 </head>
 
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
 	{% block content %}
 	<main>
-	<div class="card">
+	<div class="container">
 		<h1 class="title">Search Page</h1>
 		<div class="search">
 			<form action="{% url 'search_results' %}" method="get" style="width: 100%;">

@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Site{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/theme.css' %}" id="theme-link">
-    <script src="{% static 'js/theme.js' %}" defer></script>
 </head>
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
     <div class="theme-dependent search-card">

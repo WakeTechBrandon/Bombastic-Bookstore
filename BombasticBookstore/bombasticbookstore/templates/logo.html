@@ -10,42 +10,41 @@
     <link rel="stylesheet" href="{% static 'styles/general.css' %}">
     <link rel="stylesheet" href="{% static 'styles/header.css' %}">
 	<script src="{% static 'js/nav.js' %}" defer></script>
-    <style>
-        body {
-            background-image: linear-gradient(rgba(252, 252, 252, 0.929), rgba(241, 241, 208, 0.685)),
-            url("{% static './books.png' %}");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-    </style>
+	<style>
+		body {
+			background-image: linear-gradient(rgba(252, 252, 252, 0.929), rgba(241, 241, 208, 0.685)),
+			url("{% static './books.png' %}");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+	</style>
 </head>
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
     <header class="theme-dependent">
-        <div class="left-section theme-dependent">
-            <img class="bomb-logo" src='{% static "./bomb_no_text.png" %}' alt="Bombastic Bookstore Logo">
-        </div>
-        <div class="middle-section theme-dependent">
-            <p>Bombastic Bookstore</p>
-        </div>
-        <div class="right-section theme-dependent">
-            <p>Welcome, {{ user.username }}!</p>
-        </div>
-    </header>
-    <nav class="nav-bar theme-dependent" id="nav-bar">
-        <ul>
-            <li><a href="{% url 'index' %}">Main</a></li>
-            <li><a href="{% url 'add_book' %}">Add Item</a></li>
-            <li><a href="/search/">Update Quantities / Search Items</a></li>
-            <li><a href="/view_all/">View All Items</a></li>
-            <li><a href="/generate_report/">Generate Inventory Report</a></li>
-            <li><a href="/settings/">Settings</a></li>
-            <li><a href="{% url 'logout' %}">Sign Out</a></li>
-            <li><a href="{% url 'about' %}">About Us</a></li>
-            <li><a href="/report/">User Report</a></li>
-        </ul>
-    </nav>
-	{% block content %}
-    {% endblock %}
+		<div class="left-section theme-dependent">
+			<img class="bomb-logo" src='{% static "./bomb_no_text.png" %}' alt="Bombastic Bookstore Logo">
+		</div>
+		<div class="middle-section theme-dependent">
+			<p>Bombastic Bookstore</p>
+		</div>
+		<div class="right-section theme-dependent">
+			<p>Welcome, {{ user.username }}!</p>
+		</div>
+	</header>
+	  <nav class="nav-bar theme-dependent" id="nav-bar">
+		<ul>
+		<li><a href="{% url 'index' %}">Main</a></li>
+		  <li><a href="{% url 'add_book' %}">Add Item</a></li>
+		  <li><a href="/search/">Update Quantities / Search Items</a></li>
+		  <li><a href="/view_all/">View All Items</a></li>
+		  <li><a href="/report/">User Report</a></li>
+		  <li><a href="{% url 'about' %}">About Us</a></li>
+		  <li><a href="/settings/">Settings</a></li>
+		  <li><a href="{% url 'logout' %}">Sign Out</a></li>
+		</ul>
+	  </nav>
+{% block content %}
+{% endblock %}
 </body>
 </html>

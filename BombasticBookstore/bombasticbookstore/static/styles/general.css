@@ -1,17 +1,15 @@
 main {
+  margin-top: 1.5%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  display: flex;
   color: white;
-  padding: 100px;
-  padding-top: 50px;
+  padding: 10vh;
   /*flex-direction: column;*/
   justify-content: center;
   align-items: center;
-  position: fixed;
-  margin-top: 150px;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  transform: translate(-50%, -50%);
-  background-color: rgba(11,11,11,1);
+  /* transform: translate(10%,0); */
+  background-color: rgba(11,11,11,0.9);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 25px;
 }
@@ -30,7 +28,6 @@ main {
 
 .container {
 	position: relative;
-  text-align: center;
 }
 
 h1 {
