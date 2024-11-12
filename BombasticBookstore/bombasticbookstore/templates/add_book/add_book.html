@@ -5,11 +5,12 @@
 <html>
 <head>
     <title>Add Book</title>
+	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
 	<link rel="stylesheet" href="{% static 'styles/theme.css' %}">
-	<script src="{% static 'js/theme.js' %}" defer></script>
 </head>
+
+<body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}"></body>>
 {% block content %}
-<body>
 <main>  
 	<div class="container">
 		<h1>Add a New Book</h1>
@@ -20,6 +21,7 @@
 		</form>
 	</div>
 </main>
-</body>
 {% endblock %}
+</body>
+
 </html>

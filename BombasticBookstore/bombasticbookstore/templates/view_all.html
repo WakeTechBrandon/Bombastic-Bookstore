@@ -11,12 +11,12 @@
     <title>Filter Form</title>
     <link rel="stylesheet" href="{% static 'styles/theme.css' %}">
     <link rel="stylesheet" href="{% static 'styles/header.css' %}">
-    <script src="{% static 'js/theme.js' %}" defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
-{% block content %}
-<body>
+
+<body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
+	{% block content %}
     <div class="header">
 		<h1 align="center">Store Inventory</h1>
 		<form method="GET" action=".">
@@ -68,7 +68,7 @@
 	</div>
 	
 <div id="container" style=" margin:0px ; column-count:3 ;min-width: 33%; column-gap: 20px;padding:20px;break-inside: avoid;"> 
-    <ul style="position: relative; height 100%; width: 100%">
+    <ul style="position: relative; height: 100%; width: 100%">
         {% for book in queryset %}
         <div class="search-card" style="padding:10px; display:inline-block; border: 1px solid;">
             <div class="media" style="min-height: 300px; display: flex; font-size: 1.7vh; padding: 10px; break-inside: avoid;">
@@ -90,6 +90,7 @@
         {% endfor %}
     </ul>
 </div>
-</body>
 {% endblock %}
+</body>
+
 </html>

@@ -74,7 +74,9 @@
 				<label for="signup-password">Create Password(at least 8 characters):</label>
 				<input type="password" id="signup-password" name="password"><br><br>
 				<input type="submit" value="Sign Up">
+				
 			</form><br>
+			
 			{% if form.errors %}
 				<ul>
 					{% for field in form %}
@@ -92,6 +94,7 @@
 		<label class="slider" for="toggle">
 			<span class="toggle-switch opt1 toggle-label"><a href="{% url 'signup' %}">New User? Sign Up </a></span>
 			<span class="toggle-switch opt2 toggle-label">Login</span>
+			<a href="{% url 'password_reset' %}">Forgot Password</a>
 		</label>
 	</div>
 	</div> <!-- Card -->
