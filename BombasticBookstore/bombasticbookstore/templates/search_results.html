@@ -19,6 +19,13 @@
 		{% for book in object_list %}
 	<div>
 		<div class="search-card">
+		  <div class="close-button">
+			{% if book.isbn10 %}
+			<a href="{% url 'confirm_remove_item' book.isbn10 %}" onclick="return confirm('Are you sure you want to remove this book?');">
+			  <span class="close">&times;</span>
+			</a>
+			 {% endif %}
+		  </div>
 		  <div class="media" style="display: flex;">
 			<img src="{{ book.thumbnail }}" height="192px" width="128px" > 
 			<div class="media-body" style="margin-top: auto; margin-bottom: auto;">
@@ -30,15 +37,6 @@
 				  <li><b>Pub year:</b> {{ book.published_year }}</li>
 				  <li><b>Pages:</b> {{ book.num_pages }}</li>
 				  <li><b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}">{{book.book_id.quantity}}</a></li>
-				  <li>
-				   {% if book.isbn10 %}
-					<a href="{% url 'confirm_remove_item' book.isbn10 %}" onclick="return confirm('Are you sure you want to remove this book?');">
-					  <b>*Remove*</b>
-					</a>
-				   {% else %}
-					<p>ISBN not available</p>
-				   {% endif %}
-				  </li>
 				</ul>
 			</div>
 			<br>

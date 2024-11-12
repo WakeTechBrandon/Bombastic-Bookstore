@@ -1,11 +1,10 @@
-
-{% block title %}Sign Up{% endblock title %}
-
-{% block content %}
+{% load static %}
+<head>
+<link rel="stylesheet"  href="{% static 'styles/login.css' %}">
+</head>
 <h2>Sign Up</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button class="btn btn-success" type="submit">Sign Up</button>
 </form>
-{% endblock content %}
