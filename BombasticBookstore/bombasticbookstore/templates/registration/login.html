@@ -38,66 +38,66 @@
 	<main>
     <h1>Welcome to Bombastic Bookstore</h1><br>
 	<div class="container">
-	<div class="card">
-	  <div class="login">
-		  <span class="toggle-switch opt1">
-			<h2 style="display: block">Log In</h2>
-			<form action="{% url 'login' %}" method="post">
-				{% csrf_token %}
-				<label for="username">Username:</label>
-				<input type="text" id="username" name="username" style="width: 100%;"><br><br>
-				<label for="password">Password:</label>
-				<input type="password" id="password" name="password" style="width: 100%;"><br><br>
-				<input type="submit" value="Log In" style="width: 100%;">
-			</form><br>
-			{% if form.errors %}
-				<ul>
-					{% for field in form %}
-						{% for error in field.errors %}
-							<li>{{ error }}</li>
+		<div>
+		  <div class="login">
+			  <span class="toggle-switch opt1">
+				<h2 style="display: block">Log In</h2>
+				<form action="{% url 'login' %}" method="post">
+					{% csrf_token %}
+					<label for="username">Username:</label>
+					<input type="text" id="username" name="username" style="width: 100%;"><br><br>
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" style="width: 100%;"><br><br>
+					<input type="submit" value="Log In" style="width: 100%;">
+				</form><br>
+				{% if form.errors %}
+					<ul>
+						{% for field in form %}
+							{% for error in field.errors %}
+								<li>{{ error }}</li>
+							{% endfor %}
 						{% endfor %}
-					{% endfor %}
-				</ul>
-			{% endif %}
-		</span>
-	</div> <!-- Login -->
-	<div class="sign-up">
-		<span class="toggle-switch opt2">
-			<h2>Sign Up</h2>
-			<!-- <form action="signup.php" method="post">
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name"><br><br>
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email"><br><br>
-				<label for="userID">Enter User ID:</label>
-				<input type="text" id="userID" name="userID"><br><br>
-				<label for="signup-password">Create Password(at least 8 characters):</label>
-				<input type="password" id="signup-password" name="password"><br><br>
-				<input type="submit" value="Sign Up">
+					</ul>
+				{% endif %}
+			</span>
+		  </div> <!-- Login -->
+		  <!-- <div class="sign-up">
+			<span class="toggle-switch opt2">
+				<h2>Sign Up</h2>
+				<!-- <form action="signup.php" method="post">
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name"><br><br>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email"><br><br>
+					<label for="userID">Enter User ID:</label>
+					<input type="text" id="userID" name="userID"><br><br>
+					<label for="signup-password">Create Password(at least 8 characters):</label>
+					<input type="password" id="signup-password" name="password"><br><br>
+					<input type="submit" value="Sign Up">
+					
+				</form><br>
 				
-			</form><br>
-			
-			{% if form.errors %}
-				<ul>
-					{% for field in form %}
-						{% for error in field.errors %}
-							<li>{{ error }}</li>
+				{% if form.errors %}
+					<ul>
+						{% for field in form %}
+							{% for error in field.errors %}
+								<li>{{ error }}</li>
+							{% endfor %}
 						{% endfor %}
-					{% endfor %}
-				</ul>
-			{% endif %} -->
-		</span>
-    </div> <!-- Sign up -->
-	<p style="display:flex; justify-content: center;">OR</p>
-	<div style="display:flex; justify-content:center; padding: 25px;">
-		<input class="toggle-checkbox" type="checkbox" id="toggle">
-		<label class="slider" for="toggle">
-			<span class="toggle-switch opt1 toggle-label"><a href="{% url 'signup' %}">New User? Sign Up </a></span>
-			<span class="toggle-switch opt2 toggle-label">Login</span>
-			<a href="{% url 'password_reset' %}">Forgot Password</a>
-		</label>
-	</div>
-	</div> <!-- Card -->
+					</ul>
+				{% endif %} 
+			</span>
+		  </div> <!-- Sign up -->
+		  <p style="display:flex; justify-content: center;">OR</p>
+		  <div style="display:flex; justify-content:center; padding: 25px;">
+			<input class="toggle-checkbox" type="checkbox" id="toggle">
+			<label class="" for="toggle">
+				<span class="toggle-switch opt1 toggle-label"><a href="{% url 'signup' %}">New User? Sign Up </a></span>
+				<span class="toggle-switch opt2 toggle-label">Login</span>
+				<a href="{% url 'password_reset' %}">Forgot Password</a>
+			</label>
+		  </div>
+		</div> <!-- Card -->
 	</div> <!-- Container -->
 	</main>
 </body>

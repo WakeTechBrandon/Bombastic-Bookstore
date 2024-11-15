@@ -12,11 +12,10 @@
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
 	{% block content %}
 	<main>
-		<br>
 		<div class="container" style="width:100%">
-		<ul>
+		<ul style="top:0%;">
 			{% for book in object_list %}
-			<div class="search-card">
+			<div class="search-card" style="margin-top: 0%;">
 			  <div class="close-button">
 				{% if book.isbn10 %}
 				<a href="{% url 'confirm_remove_item' book.isbn10 %}" onclick="return confirm('Are you sure you want to remove this book?');">
