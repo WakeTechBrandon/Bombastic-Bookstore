@@ -6,45 +6,47 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
     <!-- .media{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start} -->
 	<!-- .media-body{-ms-flex:1;flex:1} -->
 </head>
+
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
 	{% block content %}
-	<main>
-		<br>
-		<div class="container" style="width:100%">
-		<ul>
-			{% for book in object_list %}
-			<div class="search-card">
-			  <div class="close-button">
-				{% if book.isbn10 %}
-				<a href="{% url 'confirm_remove_item' book.isbn10 %}" onclick="return confirm('Are you sure you want to remove this book?');">
-				  <span class="close" style="font-size: 1.4vh;">&times;</span>
-				</a>
-				 {% endif %}
-			  </div>
-			  <div class="media" style="display: flex;">
-				<img src="{{ book.thumbnail }}" height="192px" width="128px" > 
-				<div class="media-body" style="margin-top: auto; margin-bottom: auto;">
-					<ul>
-					  <li><b>ISBN:</b> {{ book.isbn10 }}</li>
-					  <li><b>Title:</b> {{ book.title }}</li>
-					  <li><b>Author:</b> {{ book.author_first }} {{ book.author_last }}</li> 
-					  <li><b>Category:</b> {{ book.categories }}</li>
-					  <li><b>Pub year:</b> {{ book.published_year }}</li>
-					  <li><b>Pages:</b> {{ book.num_pages }}</li>
-					  <li><b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}">{{book.book_id.quantity}}</a></li>
-					</ul>
-				</div>
-				<br>
-			  </div>
+	<ul>
+		{% for book in object_list %}
+	<div>
+		<div class="search-card">
+		  <div class="close-button">
+			{% if book.isbn10 %}
+			<a href="{% url 'confirm_remove_item' book.isbn10 %}" onclick="return confirm('Are you sure you want to remove this book?');">
+			  <span class="close">&times;</span>
+			</a>
+			 {% endif %}
+		  </div>
+		  <div class="media" style="display: flex;">
+			<img src="{{ book.thumbnail }}" height="192px" width="128px" > 
+			<div class="media-body" style="margin-top: auto; margin-bottom: auto;">
+				<ul>
+				  <li><b>ISBN:</b> {{ book.isbn10 }}</li>
+				  <li><b>Title:</b> {{ book.title }}</li>
+				  <li><b>Author:</b> {{ book.author_first }} {{ book.author_last }}</li> 
+				  <li><b>Category:</b> {{ book.categories }}</li>
+				  <li><b>Pub year:</b> {{ book.published_year }}</li>
+				  <li><b>Pages:</b> {{ book.num_pages }}</li>
+				  <li><b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}">{{book.book_id.quantity}}</a></li>
+				</ul>
 			</div>
-		  <br>
-			{% endfor %}
-		</ul>
+			<br>
+		  </div>
 		</div>
+	</div>
+      <br>
+        {% endfor %}
+    </ul>
 	{% endblock %}
-	</main>
 </body>
 </html>
+
