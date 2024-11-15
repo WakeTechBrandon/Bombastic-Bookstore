@@ -1,81 +1,50 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bombastic Bookstore{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/theme.css' %}" id="theme-link">
+    <link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+	<script src="{% static 'js/nav.js' %}" defer></script>
 	<style>
-		* {
-		color: white;
-		}
-		/* Set the position property of the header to fixed */
-		  header {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			color: #fff;
-			padding: 10px;
-			text-align: center;
-			background-color: white;
-			background-image: url("{% static './bomb4.png' %}");
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: left;
-		  }
 		body {
-			background-image: linear-gradient(rgba(252, 252, 252, 0.929), rgba(241, 241, 208, 0.5)),
-			url("{% static './bombasticbooks.png' %}");
+			background-image: linear-gradient(rgba(252, 252, 252, 0.929), rgba(241, 241, 208, 0.685)),
+			url("{% static './books.png' %}");
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 		}
-		
-		main {
-		position: fixed;
-		top: 70%;
-		left: 50%;
-		width: 1000px;
-		height: 1500px;
-		transform: translate(-50%, -50%);
-		}
-		.card {
-		/* Add shadows to create the "card" effect */
-		display: flex;
-		justify-content: flex-start;
-		flex-wrap: wrap;
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-		transition: 0.3s;
-		background-color: rgba(0,0,0,0.2);
-		border-radius: 25px;
-		}
-		.card-container ul {
-		list-style: none;
-		font-size: 18px;
-		}
-		.card-container a {
-		text-decoration: none;
-		}
-		/* On mouse-over, add a deeper shadow */
-		.card:hover {
-		background-color: white;
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-		}
-		
-		.card nav ul li {
-		padding: 10px;
-		background-color: rgba(0,0,0,0);
-		}
-		.card nav ul li:hover {
-		background-color: rgba(0,0,0,0.2);
-		border-radius: 10px;
-		}
-		/* Add some padding inside the card container */
-		.container {
-		padding: 2px 16px;
-		}
 	</style>
-	
-</style>
-{% block content %}{% endblock %}
 </head>
+<body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
+    <header class="theme-dependent">
+		<div class="left-section theme-dependent">
+			<img class="bomb-logo" src='{% static "./bomb_no_text.png" %}' alt="Bombastic Bookstore Logo">
+		</div>
+		<div class="middle-section theme-dependent">
+			<p>Bombastic Bookstore</p>
+		</div>
+		<div class="right-section theme-dependent">
+			<p>Welcome, {{ user.username }}!</p>
+		</div>
+	</header>
+	  <nav class="nav-bar theme-dependent" id="nav-bar">
+		<ul>
+		<li><a href="{% url 'index' %}">Main</a></li>
+		  <li><a href="{% url 'add_book' %}">Add Item</a></li>
+		  <li><a href="/search/">Update Quantities / Search Items</a></li>
+		  <li><a href="/view_all/">View All Items</a></li>
+		  <li><a href="/report/">User Report</a></li>
+		  <li><a href="{% url 'about' %}">About Us</a></li>
+		  <li><a href="/settings/">Settings</a></li>
+		  <li><a href="{% url 'logout' %}">Sign Out</a></li>
+		</ul>
+	  </nav>
+{% block content %}
+{% endblock %}
+</body>
 </html>

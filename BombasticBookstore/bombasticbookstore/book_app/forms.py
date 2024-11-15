@@ -1,8 +1,5 @@
 from django import forms
 from .models import Book, BookQuantity
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-
 
 class SearchForm(forms.Form):
     q = forms.CharField(label="Search", max_length=100)

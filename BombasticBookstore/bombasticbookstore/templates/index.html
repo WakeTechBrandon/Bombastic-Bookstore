@@ -8,45 +8,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bombastic Bookstore Inventory Management Tool</title>
-	
 </head>
-{% block content %}
-<body>
-	<header>
-		<h2>Welcome, {{ user.username }}!</h2>
-	</header>
-	<main>
+<body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
+    <header>
+        <h1>Main Menu</h1>
+        <p>Welcome to your Inventory Management System. Select an option below to get started.</p>
+    </header>
 
-	<div class="card-container">
-		<header>
-			<h1>Main Menu</h1>
-			<p>Welcome to your Inventory Management System. Select an option below to get started.</p>
-		</header>
-		<div class="card">
-		<nav>
-			<ul>
-				<li><a href="{% url 'add_book' %}">Add Item</a></li>
-				<li><a href="/search/">Update Quantities</a></li>
-				<li><a href="/search/">Search Items</a></li>
-				<li><a href="/view_all/">View All Items</a></li>
-				<li><a href="/generate_report/">Generate Inventory Report</a></li>
-				<li><a href="/settings/">Settings</a></li>
-				<li><a href="{% url 'logout' %}">Sign Out</a></li>
-			</ul>
-		</nav>
-		</div>
-		</div>
-		<div class="card">
-			<p>Welcome to Bombastic Bookstore Inventory Management Tool. Here, you can easily track all books within your inventory. Functionalities include (and are not limited to) adding new items, removing items, managing existing entries, and various user
-				settings. Our goal is to provide you with an intuitive and efficient web-based tool to streamline inventory management, ensuring that you always have the most accurate information at your fingertips. Navigate through the main menu to begin your 
-				journey to defining ease-of-use. 
-			</p>
-		</div>
-	</div>
-	<footer>
+    <main>
+        <div class="card-container">
+            {% block content %}
+            {% endblock %}
+            <div class="card">
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'add_book' %}">Add Item</a></li>
+                        <li><a href="/search/">Update Quantities</a></li>
+                        <li><a href="/search/">Search Items</a></li>
+                        <li><a href="/view_all/">View All Items</a></li>
+                        <li><a href="/generate_report/">Generate Inventory Report</a></li>
+                        <li><a href="/settings/">Settings</a></li>
+                        <li><a href="{% url 'logout' %}">Sign Out</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="card">
+                <p>
+                    Welcome to Bombastic Bookstore Inventory Management Tool. Here, you can easily track all books within your inventory. 
+                    Functionalities include (and are not limited to) adding new items, removing items, managing existing entries, and various 
+                    user settings. Our goal is to provide you with an intuitive and efficient web-based tool to streamline inventory management, 
+                    ensuring that you always have the most accurate information at your fingertips. Navigate through the main menu to begin 
+                    your journey to defining ease-of-use.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
         <p>&copy; 2024 Bombastic Bookstore Inventory Management Tool. All rights reserved.</p>
     </footer>
-	</main>
 </body>
-{% endblock %}
 </html>
+

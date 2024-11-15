@@ -1,14 +1,20 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import FormView, ListView, CreateView
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, UserModel
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import SearchForm, BookForm,BookQtyForm
 from .models import Book, BookQuantity
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from django.urls import reverse_lazy
+from django.contrib.auth.models import User
 
+def report(request):
+    """
+    returns a log of all registered users with date joined and last login
+    """
+    all_users = User.objects.values()
+    return render(request, 'report.html',{'users':all_users})
 
 class HomepageView(LoginRequiredMixin, ListView):
     model = Book
@@ -47,6 +53,9 @@ def add_book(request):
 
 
 def adjust_qty(request, id):
+    """
+    loads form page to allow qty edits
+    """
     book = Book.objects.select_related("book_id").get(id=id)
     template = loader.get_template("adjust_qty.html")
     context = {
@@ -56,6 +65,9 @@ def adjust_qty(request, id):
 
 
 def update_record(request, id):
+    """
+    allows integer updates to book quantities and saves to db
+    """
     try:
         qty = int(request.POST["qty"])
     except ValueError:
@@ -66,12 +78,49 @@ def update_record(request, id):
     q.save()
     return HttpResponseRedirect(reverse("index"))
 
+def is_valid_queryparam(param):
+    return param != '' and param is not None
+    
+def filter(request):
+    """
+    allows the view all page to filter by author/category and whether quantity is > 0 (in stock)
+    """
+    qs= Book.objects.all()
+    authors = request.GET.get('author')
+    category = request.GET.get('category')
+    instock = request.GET.get('in-stock')
+    flag_cat=""
+    flag_auth=""
+    if is_valid_queryparam(category) and category != 'Choose...':
+        flag_cat=category
+        qs = qs.filter(categories=category)
+    if is_valid_queryparam(authors) and authors != 'Choose...':
+        flag_auth=authors
+        qs = qs.filter(author_last=authors)
+    if instock == 'on':
+        qs = qs.filter(book_id__quantity__gt=0)
+        toggle="in stock"
+    else: toggle =" "
+      
+     
+    return qs,flag_auth,flag_cat, toggle
 
-def view_all(request):
-
-    books = Book.objects.select_related("book_id").all()
-    return render(request, "view_all.html", {"books": books})
-
+def BootstrapFilterView(request):
+    """
+    view all page that populates optional filters with author last name and category.
+    """
+    qs,flag_auth,flag_cat, toggle = filter(request)
+    cats = Book.objects.select_related('book_id').values('categories').distinct()
+    authors = Book.objects.values('author_last').distinct()
+    context = {
+        'flagcat':flag_cat,
+        'flagauth':flag_auth,
+        'queryset': qs,
+        'categories': cats,
+        'authors' :authors,
+        'instock':toggle
+    }
+    return render(request, "view_all.html", context) 
 
 def confirm_remove_item(request, isbn):
     book = get_object_or_404(Book, isbn10=isbn)
@@ -87,4 +136,16 @@ def delete_item(request, isbn):
     book.delete()
     return redirect('search_results')
 
+def about(request):
+    team_members = [
+        {'name': 'Ryan Burres'},
+        {'name': 'Jaylan Chavis'},
+        {'name': 'Brandon Biggs'},
+        {'name': 'James Dove'},
+        {'name': 'Joshua Macy'},
+        {'name': 'Julia McDonald'},
+    ]
+    return render(request, 'about.html', {'team_members': team_members})
 
+def login(request): 
+    return render(request, 'login.html')

@@ -1,24 +1,25 @@
 {% extends "logo.html" %}
-
 <header>
     <h1>Adjust Quantity</h1>
     <p>Update inventory below.</p>
 </header>
-
 {% block content %}
-
-<form action="updaterecord/{{ book.id }}" method="post">
-{% csrf_token %}
-Title:<br>
-<input name="title" value="{{ book.title }}", readonly="readonly">
-<br><br>
-Quantity:<br>
-<input name="qty" value="{{ book.book_id.quantity }}">
-<br><br>
-<input type="submit" value="Submit">
-</form>
+<main>
+    <h1 class="title">Update book</h1>
+    <div class="card">    
+        <form action="updaterecord/{{ book.id }}" method="post">
+        {% csrf_token %}
+        Title:<br>
+        <input name="title" value="{{ book.title }}", readonly="readonly">
+        <br><br>
+        Quantity:<br>
+        <input name="qty" value="{{ book.book_id.quantity }}">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</main>
 <footer>
     <p>&copy; 2024 Bombastic Bookstore Inventory Management Tool. All rights reserved.</p>
 </footer>
-
 {% endblock %}
