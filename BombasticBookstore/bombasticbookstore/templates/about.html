@@ -19,12 +19,47 @@
 				<li>{{ team_member.name }}</li>
 			  {% endfor %}
 			</ul>
-			
+
+			<h2>About Bombastic Bookstore</h2>
+			<p>
+				Welcome to Bombastic Bookstore Inventory Management Tool! Here, you can easily track all books within your inventory. 
+				Functionalities include (and are not limited to) adding new items, removing items, managing existing entries, and various 
+				user settings. Our goal is to provide you with an intuitive and efficient web-based tool to streamline inventory management, 
+				making sure that you always have the most accurate information. Navigate through the main menu to begin.<br><br>
+			</p>
+			<h3>Key Features</h3>
+			<ul>
+				<li><b>Real-Time Inventory Tracking:</b> Keep up-to-date information of the entire stock.</li>
+				<li><b>Easy Data Management:</b> Adding, updating, and removing items is just a few clicks away!</li>
+				<li><b>Search and Filter:</b> Quickly find books by title, ISBN, or author.</li>
+				<li><b>Easy-to-use Interface:</b> Bombastic's interface is intuitive and simple to use.</li>
+			</ul><br>
+			<h3>Decision Making</h3>
+			<p>
+				Our backend for Bombastic is written primarily in Python and stood up by Django web framework, while our database is SQL. We chose Django 
+				for its scalability and ease-of-use, with the intention that we would be able to pass on the efficiency to the user. 
+				By design, Bombastic is also scalable, allowing the customer to grow or shrink comfortably with minimal effort. Bombastic
+				is also highly modular, which feeds into scalability. Entire pages can be added easily and quickly to the main web application. 
+				We decided on a SQL database primarily for the structured data storage and vertical scalability. Ultimately, we chose tools that reflected our goals.<br><br>
+			</p>
+			<h3>Why Bombastic?</h3>
+			<ul>
+				<li>Made by bookworms, for bookworms!</li>
+				<li>Built with scalability and flexibility in mind.</li>
+				<li>Security and accuracy are our goals!</li>
+			</ul>
+			<br>
+			<p>
+				Thank you for choosing Bombastic Bookstore for your inventory needs!
+			</p>
 			<div style="float:right;">
 				<img class="eagle-logo" src='{% static "./bombastic.png" %}' alt="Bombastic Bookstore Wake Tech Logo">
 			</div>
 		</div>
 	</main>
+	<footer>
+		<p>&copy; 2024 Bombastic Bookstore Inventory Management Tool. All rights reserved.</p>
+	</footer>
 </body>
-</html>
 {% endblock %}
+</html>
