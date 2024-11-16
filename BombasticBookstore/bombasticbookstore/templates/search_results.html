@@ -6,9 +6,13 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'styles/general.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
     <!-- .media{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start} -->
 	<!-- .media-body{-ms-flex:1;flex:1} -->
 </head>
+
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
 	{% block content %}
 	<main>
@@ -39,11 +43,14 @@
 				<br>
 			  </div>
 			</div>
-		  <br>
-			{% endfor %}
-		</ul>
+			<br>
+		  </div>
 		</div>
+	</div>
+      <br>
+        {% endfor %}
+    </ul>
 	{% endblock %}
-	</main>
 </body>
 </html>
+
