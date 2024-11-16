@@ -1,3 +1,7 @@
+@font-face {
+    font-family: badaboom;
+    src: url(BADABOOM.TTF);
+  }
 * 
 {
 color: white;
@@ -8,7 +12,11 @@ body
 {
     background-color: rgba(10,10,10,1); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
-    
+
+.welcome{
+    font-family: badaboom;
+}
+
 main 
 {
     padding: 100px;

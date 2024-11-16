@@ -1,3 +1,8 @@
+@font-face {
+  font-family: badaboom;
+  src: url(BADABOOM.TTF);
+}
+
 .header {
     background-color: powderblue;
 	padding: 25px;
@@ -41,6 +46,7 @@ header {
 }
  
 .middle-section {
+  font-family: badaboom;
   flex: 1;
   margin-left: 70px;
   margin-right: 35px;
