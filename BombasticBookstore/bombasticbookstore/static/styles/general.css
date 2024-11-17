@@ -47,7 +47,7 @@ height: 100px;
 /* Navigation Styling */
 .nav-bar {
 margin-top: 100px; /* Adjusted for fixed header */
-background-color: black;
+background-color: lightgray;
 padding: 10px 0;
 text-align: center;
 }
