@@ -46,20 +46,26 @@ header {
  
 .middle-section {
   flex: 1;
-  margin-left: 70px;
+  margin-left: 35px;
   margin-right: 35px;
-  max-width: 150px;
   display: flex;
+  text-align: center;
   align-items: center;
+  justify-content: center;
+  font-family: badaboom;
+  font-size: 2.0vh;
+  
+  /* background-image: linear-gradient(180deg, white, red);
+  color: transparent;
+  background-clip: text; */ /* Possible gradient for text. */
 }
   
   
 .right-section {
-  width: 180px;
-  margin-right: 20px;
+  margin-right: 35px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-shrink: 0;
 }
   
