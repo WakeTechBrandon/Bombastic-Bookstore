@@ -36,6 +36,12 @@ header {
   align-items: center;
 }
   
+.title {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .bomb-logo {
   height: 100px;
 }
@@ -50,6 +56,7 @@ header {
   margin-right: 35px;
   max-width: 150px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
   
@@ -62,4 +69,23 @@ header {
   justify-content: space-between;
   flex-shrink: 0;
 }
-  
+
+.button {
+  background-color: #ccc; /* or any other color you want */
+  padding: 10px; /* or any other padding you want */
+  transition: background-color 0.3s;
+  display: inline-block; /* to make the background color wrap around the image */
+}
+
+.button:hover {
+  background-color: #aaa; /* or any other color you want */
+}
+
+.button img {
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.button:hover img {
+  opacity: 0.8;
+}

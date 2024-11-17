@@ -24,10 +24,12 @@
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
     <header class="theme-dependent">
         <div class="left-section theme-dependent">
-            <img class="bomb-logo" src='{% static "./bomb_no_text.png" %}' alt="Bombastic Bookstore Logo">
+            <a href="{% url 'index' %}">
+                <img class="bomb-logo" src='{% static "./bomb_no_text.png" %}' alt="Bombastic Bookstore Logo">
+            </a>
         </div>
         <div class="middle-section theme-dependent">
-            <p>Bombastic Bookstore</p>
+            <img class="title" src='{% static "./title.png" %}' alt="Title">
         </div>
         <div class="right-section theme-dependent">
             <p>Welcome, {{ user.username }}!</p>
@@ -36,14 +38,24 @@
 
     <nav class="nav-bar theme-dependent" id="nav-bar">
         <ul>
-            <li><a href="{% url 'index' %}">Main</a></li>
-            <li><a href="{% url 'add_book' %}">Add Item</a></li>
-            <li><a href="/search/">Update Quantities / Search Items</a></li>
-            <li><a href="/view_all/">View All Items</a></li>
-            <li><a href="/report/">User Report</a></li>
-            <li><a href="{% url 'about' %}">About Us</a></li>
-            <li><a href="/settings/">Settings</a></li>
-            <li><a href="{% url 'logout' %}">Sign Out</a></li>
+            <li><a href="{% url 'add_book' %}">
+                <img class="add_item_btn" src='{% static "./add_item_btn.png" %}' alt="Add Item Button" style="height: 75px;">
+            </a></li>
+            <li><a href="{% url 'search' %}">
+                <img class="search_item_btn" src='{% static "./search_item_btn.png" %}' alt="Search Item Button" style="height: 75px;">
+            </a></li>
+            <li><a href="{% url 'bootstrap' %}">
+                <img class="view_item_btn" src='{% static "./view_item_btn.png" %}' alt="View Item Button" style="height: 75px;">
+            </a></li>
+            <li><a href="{% url 'report' %}">
+                <img class="user_report_btn" src='{% static "./user_report_btn.png" %}' alt="User Report Button" style="height: 75px;">
+            </a></li>
+            <li><a href="{% url 'settings' %}">
+                <img class="settings_btn" src='{% static "./settings_btn.png" %}' alt="Settings Button" style="height: 75px;">
+            </a></li>
+            <li><a href="{% url 'logout' %}">
+                <img class="sign_out_btn" src='{% static "./sign_out_btn.png" %}' alt="Sign Out Button" style="height: 75px;">
+            </a></li>
         </ul>
     </nav>
 
@@ -55,9 +67,8 @@
             <p>&copy; 2024 Bombastic Bookstore</p>
         </div>
         <div class="footer-section right-footer">
-            <ul>
+            <ul style="justify-content: center;">
                 <li><a href="{% url 'about' %}">About Us</a></li>
-				<li><a href="{% url 'logout' %}">Sign Out</a></li>
             </ul>
         </div>
     </footer>
