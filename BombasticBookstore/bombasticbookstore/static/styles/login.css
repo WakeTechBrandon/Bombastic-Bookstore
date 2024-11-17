@@ -6,21 +6,25 @@ color: white;
         
 body 
 {
-    background-color: rgba(10,10,10,1); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    background-color: rgba(10,10,10,1); 
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
     
 main 
 {
-    padding: 100px;
-    justify-content: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 500px;
-    transform: translate(-50%, -50%);
-    background-color: rgba(11,11,11,1);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 25px;
+  margin-top: 10%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  display: flex;
+  color: white;
+  padding: 10vh;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+  /* transform: translate(10%,0); */
+  background-color: rgba(11,11,11,0.9);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 25px;
 }
   
 .card 
@@ -34,7 +38,15 @@ main
     transition: 0.3s;
     background-color: rgba(0,0,0,0.2);
     border-radius: 25px;
-    
+}
+
+.container {
+	
+}
+
+.bookstore-image {
+	height: 500px;
+	width: 500px;
 }
 
 .flex-parent 
