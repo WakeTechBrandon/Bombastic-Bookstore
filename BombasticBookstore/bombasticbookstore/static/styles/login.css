@@ -1,3 +1,8 @@
+@font-face {
+  font-family: badaboom;
+  src: url(/static/BADABOOM.TTF);
+}
+
 * 
 {
 color: white;
@@ -10,6 +15,10 @@ body
 	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
     
+.welcome{
+    font-family: badaboom;
+}
+
 main 
 {
   margin-top: 10%;
