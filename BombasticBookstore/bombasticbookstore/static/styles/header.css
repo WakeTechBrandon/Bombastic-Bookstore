@@ -1,3 +1,8 @@
+@font-face {
+  font-family: badaboom;
+  src: url(/static/BADABOOM.TTF);
+}
+
 .header {
     
 	padding: 25px;
