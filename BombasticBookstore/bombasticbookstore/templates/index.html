@@ -4,33 +4,26 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bombastic Bookstore Inventory Management Tool</title>
 </head>
+{% block content %}
+
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
     <main>
-        <div class="card-container">
-            {% block content %}
-            {% endblock %}
-            <div class="card">
-                <nav>
-                    <ul>
-                        <li><a href="{% url 'add_book' %}">Add Item</a></li>
-                        <li><a href="/search/">Update Quantities</a></li>
-                        <li><a href="/search/">Search Items</a></li>
-                        <li><a href="/view_all/">View All Items</a></li>
-                        <li><a href="/generate_report/">Generate Inventory Report</a></li>
-                        <li><a href="/settings/">Settings</a></li>
-                        <li><a href="{% url 'logout' %}">Sign Out</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <h2 align="top"> Today's Inventory Snapshot: </h1>
+
+            <ul>
+                {% for i in object_list %}
+                <li>{{ i.measure }} &nbsp;&nbsp;&nbsp; {{ i.id__count }}</li>
+                <hr />
+                {% endfor %}
+
+           </ul>
     </main>
 
-
+    {% endblock %}
 </body>
 </html>
-

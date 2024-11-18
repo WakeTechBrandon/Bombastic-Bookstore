@@ -4,97 +4,104 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <title>Filter Form</title>
-  </head>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<title>Filter Form</title>
+</head>
 
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
 	{% block content %}
-    <div class="header" style="background:rgba (51, 170, 51, .9); ">
+	<div class="header">
 		<h1 align="center">Store Inventory</h1>
 		<form method="GET" action=".">
 			<div class="row justify-content-center">
-				<div class="form-group col-md-2" >
-					<label for="category"><em>Category</em></label>
+				<div class="form-group col-md-2">
+					<label for="category"><em>Category</em></label>&nbsp;
 					<select id="category" class="form-control" name="category">
 						<option selected>Choose...</option>
 						{% for cat in categories %}
-							{% for i in cat.values %}
-								<option value="{{ i }}">{{ i }}</option>
-							{% endfor %}
+						{% for i in cat.values %}
+						<option value="{{ i }}">{{ i }}</option>
 						{% endfor %}
-					</select> 
+						{% endfor %}
+					</select>
 				</div>
 
-				<div class="form-group col-md-2" >
-					<label for="author"><em>Author</em></label>
+				<div class="form-group col-md-2">
+					<label for="author"><em>Author</em></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<select id="author" class="form-control" name="author">
 						<option selected>Choose...</option>
 						{% for aut in authors %}
-							{% for i in aut.values %}
-								<option value="{{ i }}">{{ i }}</option>
-							{% endfor %}
+						{% for i in aut.values %}
+						<option value="{{ i }}">{{ i }}</option>
+						{% endfor %}
 						{% endfor %}
 					</select>
 					<br>
 				</div>
 				<br>
-				
-				<div class="form-group col-md-2"  style="float:left;">
-					
-						<div class="form-check" >
-						  
-						  <label class="form-check-label" for="in-stock">
+
+				<div class="form-group col-md-2" style="float:left;">
+
+					<div class="form-check">
+
+						<label class="form-check-label" for="in-stock">
 							<em>In-Stock only</em>
-						  </label>
-						  <input class="form-check-input" type="checkbox" id="in-stock" name="in-stock">
-						</div>
-					
+						</label>
+						<input class="form-check-input" type="checkbox" id="in-stock" name="in-stock">
+					</div>
+
 				</div>
 				<br>
 				<div class="form-group col-sm-1" style="position: absolute;">
 					<br>
 					<div>
-						<button type="submit" class="btn btn-primary">Search</button> 
+						<button type="submit" class="btn btn-primary">Search</button>
 					</div>
 				</div><br>
-				<div align="center">Filtered by:  <b>{{flagcat}},{{flagauth}},  {{instock}}</b></div>
+				<div align="center">Filtered by: <b>{{flagcat}},{{flagauth}}, {{instock}}</b></div>
 			</div>
 		</form>
 	</div>
-	
-<main>
-	<div id="container" style=" margin:0px ; column-count:3 ;min-width: 33%; column-gap: 20px;padding:20px;break-inside: avoid;"> 
-		<ul style="position: relative; height: 100%; width: 100%;margin: 8px;">
-			{% for book in queryset %}
-			<div class="search-card" style="display:inline-block; border: 1px solid;align-items:center; min-width: 100%;">
-				<div class="media" style="min-height: 300px; display: flex; font-size: 1.7vh; padding: 10px; break-inside: avoid;">
-					
-					<img src="{{ book.thumbnail }}" height="192px" width="128px"> 
-					<div class="media-body" style="text-align:left; display: inline-block">
-						<ul>
-							<li><b>ISBN:</b> <span style="font-size: 1.4vh;"> {{ book.isbn10 }} </span></li>
-							<li><b>Title:</b> <span style="font-size: 1.4vh;">{{ book.title }}</span></li>
-							<li><b>Author:</b> <span style="font-size: 1.4vh;">{{ book.author_first }} {{ book.author_last }}</span></li>
-							<li><b>Category:</b> <span style="font-size: 1.4vh;">{{ book.categories }}</span></li>
-							<li><b>Pub year:</b> <span style="font-size: 1.4vh;">{{ book.published_year }}</span></li>
-							<li><b>Pages:</b> <span style="font-size: 1.4vh;">{{ book.num_pages }}</span></li>
-							<li><b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}"><span style="font-size: 1.4vh;">{{book.book_id.quantity}}</span></a></li>
-						</ul>
+
+	<main>
+		<div id="container"
+			style=" margin:10px ; column-count:3 ;min-width: 33%; column-gap: 20px;padding:20px;break-inside: avoid;">
+			<ul style="position: relative; height: 100%; width: 100%;margin: 0px;">
+				{% for book in queryset %}
+				<div class="search-card"
+					style="display:inline-block; border: 1px solid;align-items:center; min-width: 100%;">
+					<div class="media"
+						style="min-height: 300px; display: flex; font-size: 1.7vh; padding: 10px; break-inside: avoid;">
+
+						<img src="{{ book.thumbnail }}" height="192px" width="128px">
+						<div class="media-body" style="text-align:left; display: inline-block">
+							<ul>
+								<li><b>ISBN:</b> <span style="font-size: 1.4vh;"> {{ book.isbn10 }} </span></li>
+								<li><b>Title:</b> <span style="font-size: 1.4vh;">{{ book.title }}</span></li>
+								<li><b>Author:</b> <span style="font-size: 1.4vh;">{{ book.author_first }} {{
+										book.author_last }}</span></li>
+								<li><b>Category:</b> <span style="font-size: 1.4vh;">{{ book.categories }}</span></li>
+								<li><b>Pub year:</b> <span style="font-size: 1.4vh;">{{ book.published_year }}</span>
+								</li>
+								<li><b>Pages:</b> <span style="font-size: 1.4vh;">{{ book.num_pages }}</span></li>
+								<li><b>Store inventory:</b> <a href="{% url 'adjust_qty' book.id%}"><span
+											style="font-size: 1.4vh;">{{book.book_id.quantity}}</span></a></li>
+							</ul>
+						</div>
+
 					</div>
-					
+
 				</div>
-				
-			</div>
-			
-			{% endfor %}
-		</ul>
-		
-	</div>
-</main>
+
+				{% endfor %}
+			</ul>
+
+		</div>
+	</main>
 </body>
 {% endblock %}
 </body>
