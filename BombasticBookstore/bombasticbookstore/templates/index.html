@@ -9,10 +9,11 @@
 
     <title>Bombastic Bookstore Inventory Management Tool</title>
 </head>
-{% block content %}
 
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
-    <main>
+    
+{% block content %}
+	<main>
         <h2 align="top"> Today's Inventory Snapshot: </h1>
 
             <ul>
@@ -23,7 +24,6 @@
 
            </ul>
     </main>
-
-    {% endblock %}
+{% endblock %}
 </body>
 </html>
