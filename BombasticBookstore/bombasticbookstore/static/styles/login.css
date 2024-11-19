@@ -89,3 +89,9 @@ main
 {
   display: inline;
 }
+
+.line
+{
+    position: relative;
+    text-align: center;
+}

@@ -87,6 +87,9 @@
 				</ul>
 			{% endif %} -->
 		</span>
+		<div class="line">	
+			<a href="{% url 'password_reset' %}">Forgot Password?</a>
+		</div>
     </div> <!-- Sign up -->
 	<p style="display:flex; justify-content: center;">OR</p>
 	<div style="display:flex; justify-content:center; padding: 25px;">
@@ -94,8 +97,9 @@
 		<label class="slider" for="toggle">
 			<span class="toggle-switch opt1 toggle-label"><a href="{% url 'signup' %}">New User? Sign Up </a></span>
 			<span class="toggle-switch opt2 toggle-label">Login</span>
-			<a href="{% url 'password_reset' %}">Forgot Password</a>
 		</label>
+
+		
 	</div>
 	</div> <!-- Card -->
 	</div> <!-- Container -->
