@@ -9,12 +9,10 @@ footer {
   
     position: fixed;
   
-    color: black;
-    background-color: white;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: rgb(230, 230, 230);
-    padding: 1px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+    text-align: center; 
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
   }
   
   .footer-section {
@@ -54,14 +52,14 @@ footer {
   
   .right-footer ul li a {
     text-decoration: underline;
-    color: blue;
+    color: rgb(151, 151, 255);
   }
   
   .right-footer ul li a:visited {
-    color: purple;
+    color: rgb(250, 95, 250);
   }
   
   .right-footer ul li a:hover {
-    color: darkblue;
+    color: rgb(136, 136, 255);
   }
   
