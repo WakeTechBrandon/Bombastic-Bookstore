@@ -149,6 +149,9 @@ def BootstrapFilterView(request):
 
 
 def confirm_remove_item(request, isbn):
+    """
+    asks the user if they are sure they would like to delete the item, and deletes from the DB when confirmation is received
+    """
     book = get_object_or_404(Book, isbn10=isbn)
 
     if request.method == "POST":
@@ -165,6 +168,9 @@ def delete_item(request, isbn):
 
 
 def about(request):
+    """
+    allows the website to display an unordered list of group member names
+    """
     team_members = [
         {"name": "Ryan Burres"},
         {"name": "Jaylan Chavis"},

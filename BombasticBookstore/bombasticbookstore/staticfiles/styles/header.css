@@ -1,0 +1,76 @@
+@font-face {
+  font-family: badaboom;
+  src: url(/static/BADABOOM.TTF);
+}
+
+.header {
+  background-color: rgba(161, 155, 144, 0.7); 
+	padding: 25px;
+}
+
+/* Header Styling */
+header {
+  z-index: 9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  position: fixed;
+  
+  color: black;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(230, 230, 230);
+}
+  
+.top-section {
+	display: block;
+}
+
+.bottom-section {
+	display: block;
+	top:50%;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+  
+.bomb-logo {
+  height: 100px;
+}
+
+.eagle-logo {
+  height: 100px;
+}
+ 
+.middle-section {
+  flex: 1;
+  margin-left: 35px;
+  margin-right: 35px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: badaboom;
+  font-size: 2.0vh;
+  
+  /* background-image: linear-gradient(180deg, white, red);
+  color: transparent;
+  background-clip: text; */ /* Possible gradient for text. */
+}
+  
+  
+.right-section {
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+  
