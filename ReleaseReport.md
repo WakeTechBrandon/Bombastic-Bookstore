@@ -1,94 +1,78 @@
 CSC289 Programming Capstone Project
 
-
 Project Name: {Bombastic Bookstore}
-
 Team Number: {#2}
-
 Team Project Manager: {Brandon Biggs}
-
 Team Members: {***Julia McDonald, Jaylan Chavis, James Dove, Joshua Macy, Ryan Burres***}
 
  
-
 Release Report
 
- [BombasticBookstore] - Version [v1.0]
+ [Bombastic Bookstore] - Version [v1.0.0]
 
- 
 
 Overview
 
-[Provide a brief overview of the purpose of the software and the significance of this release.]
-
-Bombastic Bookstore aims to be an inventory management software for a bookstore owner. This release is a feature complete version.
+This release report provides an overview of the development, testing, and deployment process for Version 1.0.0 of our new software project, Bombastic Bookstore. The release marks the successful completion of the initial phase of development and the launch of the application to production. Bombastic Bookstore aims to be an inventory management software for a bookstore owner. 
 
 Development Highlights
 
-·    Project Initiation:
+Project Kickoff: The project officially started on August 30, 2024, with the formation of the development team and the kickoff meeting to discuss project goals, scope, and timeline. 
 
-[Describe the start of the project, including kickoff meetings and initial planning.]
-Iniitliazing Django Enviornment, Github Repository, and the Trello Board Management App. Started with set
+Requirements Gathering: The team conducted thorough requirements gathering sessions to define the features and functionalities of the software application. Technologies and team knowledge gaps were assessed. Appropriate learning resources were distributed to team members, such as links to Django tutorials.
 
-Requirements Gathering:
-[Describe the process of gathering project requirements.]
-Django, Python, HTML and CSS Knowledge. Image Creation Software, Javascript. Git.
-
-Design and Architecture:
-[Explain the design decisions and architectural considerations.]
-Universal header and navigation, Ease-of-access. Incorporated Editing/removal in Search Results, to cutdown on visual clutter.
-
-Development Progress:
-[Highlight key development milestones, challenges, and achievements.]
-Sprint 1 Setting Up the backend
-Sprint 2 Barebones Front end
-Sprint 3 Finishing the backend
-Sprint 4 Was finishing Front End
-Sprint 5 was Overall Polish
-
-Setting up Django Enviornment, 
-SQL Database Setup, 
-Creating and dispalying first webpages, 
-Created Login System, 
-Making Webpages interactive and dynamic,
-Finalized features (Searching filtering, removing etc),
-Created Theme customization.
+Design and Architecture: The software architecture and design were finalized, including database schema and system components. The team decided to use the Django web framework to create the inventory application.  Sqlite was chosen as the database system along with the Django built-in user access control functions to manage login. The team decided the application should be minimalist, with ease-of-access, and have full CRUD (create, read, update, delete) abilities based on user responsibilities.
 
 
-Testing and Quality Assurance:
-[Describe the testing process, including types of testing performed and any notable results.]
+Development 
 
-Manual Testing, we would open the server and manually test features such as input validation.
+Sprint: Development proceeded in multiple sprints, each lasting two weeks, with a focus on implementing specific features and user stories. The sprints were organized as follows:
+    - Sprint 1: Setting up the models and related back-end functions
+    - Sprint 2: Core front-end functions and templates
+    - Sprint 3: Completing back-end development
+    - Sprint 4: Completing front-end development
+    - Sprint 5: Refinement and styling
 
-Bug Fixes and Enhancements:
-[List any bugs that were fixed and enhancements that were implemented in this release.]
+Some milestones achieved:
+    - Setting up Django environment
+    - SQL database setup
+    - Creating and displaying first webpages
+    - Creating login system
+    - Making webpages interactive and dynamic
+    - finalized features (searching, filtering, removing etc)
+    - Creating theme customization
 
-Sign-up page 404, Add item 404, Non-scalable UI elements.
- 
+Challenges faced:
+    - Knowledge gaps
+    - Scheduling conflicts
+
+Code Reviews and Testing: Regular code reviews were conducted to ensure code quality and adherence to coding standards. Manual/integration testing was used to validate functionality. Github's pull-request review feature was used to allow multiple team members to review all code changes.
+
 
 Deployment
 
-[Explain the deployment process, including any downtime or issues encountered.]
+Staging Environment: The application was deployed independently by each team member throughout development using Django's built-in server functionality.
 
-Requires manual server deployment. Download off Github and then activate server on client's local machine.
+Production Deployment: After successful testing in the staging environment, the application was packaged into a batch installation file ready to be distributed to users for use.
  
 
 Release Notes
 
 New Features:
-[List and describe the new features introduced in this release.]
 
-As the first release, all features are new!
+This the first release. All features are new, including the abilites to create/delete new stock items and manage quantities of existing stock items.
 
 Bug Fixes:
-[List and describe any bugs that were fixed in this release.]
+
+Several error catching methods were implemented to avoid http status code 404 errors.  Scalable UI components were added to allow adaptable screen types.
 
 Known Issues:
-[List any known issues or limitations in the release, along with plans for addressing them.]
 
-Cannot filter search results, only view all page. Login-Page Image needs to look more like a bookstore.
- 
+Filtering options are currently limited to author and category.  Search option isn't advanced enough to allow narrowing down results to find the most relevant results.
+
 
 Conclusion
 
-[Summarize the key outcomes of this release and discuss any future plans or considerations.]
+The release of Version 1.0.0 of Bombastic Bookstore represents a significant milestone in the project's development journey. The project team has worked diligently to deliver a high-quality software application that meets the needs and expectations of our users. We look forward to continued feedback and collaboration as we work towards future releases and enhancements.
+
+This release report provides stakeholders with an overview of the development process, testing efforts, deployment activities, and key highlights for Version 1.0.0 of Bombastic Bookstore. It serves as a record of the project's progress and achievements, highlighting the successful completion of the initial phase of development and the launch of the application to production.
