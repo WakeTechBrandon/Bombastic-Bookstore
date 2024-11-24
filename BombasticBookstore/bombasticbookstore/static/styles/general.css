@@ -43,10 +43,13 @@ height: 100px;
 
 /* Navigation Styling */
 .nav-bar {
-margin-top: 10vh; /* Adjusted for fixed header */
-background-color: black;
-padding: 10px 0;
-text-align: center;
+  margin-top: 10vh;
+  background-image: url('../nav_bar.png');
+  background-size: cover;
+  background-position: center;
+  padding: 15px 0;
+  text-align: center;
+  height: 10vh;
 }
 
 
@@ -74,6 +77,14 @@ text-decoration: none;
 font-weight: 600;
 font-size: 1rem;
 padding: 5px 10px;
+display: inline-block;
+height: 7vh;
+line-height: 7vh;
+}
+
+.nav-bar img {
+  width: auto;
+  height: 7vh;
 }
 
 .nav-bar a:hover {

@@ -25,6 +25,8 @@ header {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgb(230, 230, 230);
+  height: 10vh
+  alight-items: center;
 }
   
 .top-section {
