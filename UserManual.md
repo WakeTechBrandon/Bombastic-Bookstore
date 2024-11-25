@@ -1,4 +1,4 @@
-#CSC289 Programming Capstone Project
+# CSC289 Programming Capstone Project
 
 
 Project Name: Bombastic Bookstore Inventory Management System
@@ -11,18 +11,18 @@ Team Members: Brandon Biggs, Julia McDonald, Ryan Burres, James Dove, Jaylan Cha
 
 
 
-#Bombastic Book Store User Manual
+# Bombastic Book Store User Manual
 
  
 
-##Introduction
+## Introduction
 
 The purpose of this document is to aid with problems that occur while implementing and operating the application. In addition, this document provides information on system specification for the application to perform at its best to prevent problems. The document is intended for anyone using the application.
  
 
-##Getting Started
+## Getting Started
 
-###System Requirements
+### System Requirements
 An up-to-date desktop or laptop device is needed to run this application. The devices should include the following specifications:
 •	A secure internet connection
 •	At least 64 GB of storage
@@ -31,7 +31,7 @@ An up-to-date desktop or laptop device is needed to run this application. The de
 
 The software necessary to run this application will be an up-to-date browser and operating system. This system can run on most browsers and operating systems. However, for the best results use a device with Windows 11 and either Chrome or Microsoft Edge as the internet browser.
  
-###Logging In
+### Logging In
 To start using the Bombastic Bookstore Inventory Management System, follow the steps below:
 1.	Start by running the application from the command line.
 2.	Log in using your username and password. If you are a first-time user sign up using your email.
@@ -40,14 +40,14 @@ To start using the Bombastic Bookstore Inventory Management System, follow the s
 ![image](https://github.com/user-attachments/assets/1bc5612a-143d-4032-b516-9993cea47a8e)
 
 
-##Features Overview
+## Features Overview
 
-###Main Page and Navigation Bar
+### Main Page and Navigation Bar
 Here on the main page, you will have a navigation bar that will be on each page to navigate between all the features in the application
 ![image](https://github.com/user-attachments/assets/e32f9fea-c184-4531-a15c-c198b280273f)
  
 
-###Finding and Adding Books
+### Finding and Adding Books
 To find and add books follow the steps below:
 
 1.	Click on the Add Item tab on the navigation bar 
@@ -75,7 +75,7 @@ Then click Add Book at the bottom of the form.
 ![image](https://github.com/user-attachments/assets/1c30242f-309d-46e2-bd88-6ef7a2b1b627)
 
 
-###Updating Quantities
+### Updating Quantities
 To update the quantity of the books:
 1.	Click on the View All Items tab in the navigation bar
 ![image](https://github.com/user-attachments/assets/6c5e631d-98b1-4b60-8c8f-600068be5974)
@@ -97,30 +97,30 @@ On this page you can view all the items in inventory.
 ![image](https://github.com/user-attachments/assets/c1376ac8-a603-47e3-9dd4-0139aaff6469)
 
 
-###Settings
+### Settings
 In the navigation bar click on settings, here you can change your email, password, and theme. 
 ![image](https://github.com/user-attachments/assets/c178ee3c-a731-4edd-88eb-85ee5c4239df)
 
 
-###User Report
+### User Report
 In the navigation bar click on the User Report tab. This page shows who has signed in to the management system as well as when they signed up and when they last logged in.  
 ![image](https://github.com/user-attachments/assets/11e2cbcd-07be-46f5-8851-1f3877950708)
 
 
-###About Us
+### About Us
 In the about us page you can learn more about our team as well as the purpose of this application.  
 ![image](https://github.com/user-attachments/assets/5a6ebbb3-78aa-429a-a9d0-e961cf90e65d)
 
  
-##Troubleshooting
+## Troubleshooting
 
-###Common Problems
+### Common Problems
 •	If the login page does not load when trying to run the application, the wrong link was used. Make sure this link is used to get to the login page:
 
 http://localhost:8000/accounts/login/?next=/
  
 
-##Frequently Asked Questions (FAQs)
+## Frequently Asked Questions (FAQs)
 
 How to remove and update book data?
 On the Update Items page. Click on the store inventory number to update the inventory.
@@ -132,7 +132,7 @@ How to find books?
 On the Update Quantities/Search page or the View All Items
  
 
-##Support and Contact Information
+## Support and Contact Information
 
 If troubleshooting your problem with our user manual has not worked and you need extra support, contact our team:
 
