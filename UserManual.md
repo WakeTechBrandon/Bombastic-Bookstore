@@ -137,8 +137,13 @@ On the Update Quantities/Search page or the View All Items
 If troubleshooting your problem with our user manual has not worked and you need extra support, contact our team:
 
 Jaylan Chavis: jmchavis3@my.waketech.edu
+
 Ryan Burres: rsburres@my.waketech.edu
+
 Brandon Biggs: bmbiggs@my.waketech.edu
+
 James Dove: jedove@my.waketech.edu
+
 Joshua Macy: jmacy@my.waketech.edu
+
 Julia McDonald: jfmcdonald@my.waketech.edu
