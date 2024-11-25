@@ -120,6 +120,8 @@ In the about us page you can learn more about our team as well as the purpose of
 http://localhost:8000/accounts/login/?next=/
  
 
+
+
 ## Frequently Asked Questions (FAQs)
 
 How to remove and update book data?
@@ -132,9 +134,13 @@ How to find books?
 On the Update Quantities/Search page or the View All Items
  
 
+
+
 ## Support and Contact Information
 
 If troubleshooting your problem with our user manual has not worked and you need extra support, contact our team:
+
+
 
 Jaylan Chavis: jmchavis3@my.waketech.edu
 
