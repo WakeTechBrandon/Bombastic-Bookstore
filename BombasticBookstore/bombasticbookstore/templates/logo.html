@@ -24,10 +24,14 @@
 <body class="{% if request.COOKIES.theme %}{{ request.COOKIES.theme }}{% else %}light{% endif %}">
     <header class="theme-dependent">
         <div class="left-section theme-dependent">
-            <img class="bomb-logo" src='{% static "./bomb_no_text.png" %}' alt="Bombastic Bookstore Logo">
+            <a href="{% url 'index' %}">
+                <img class="bomb-logo" src='{% static "./bomb_no_text.png" %}' alt="Bombastic Bookstore Logo">
+            </a>
         </div>
         <div class="middle-section theme-dependent">
-            <h1 style="display: inline">Bombastic Bookstore</h1>
+            <a href="{% url 'index' %}">
+                <img src="{% static '/title.png' %}" alt="Bombastic Bookstore" style="display: inline" height="110">
+            </a>
         </div>
         <div class="right-section theme-dependent">
             <p>Welcome, {{ user.username }}!</p>
@@ -36,12 +40,12 @@
 
     <nav class="nav-bar theme-dependent" id="nav-bar">
         <ul>
-            <li><a href="{% url 'index' %}">Main</a></li>
-            <li><a href="{% url 'add_book' %}">Add Item</a></li>
-            <li><a href="/search/">Update Quantities / Search Items</a></li>
-            <li><a href="/view_all/">View All Items</a></li>
-            <li><a href="/report/">User Report</a></li>
-            <li><a href="{% url 'logout' %}">Sign Out</a></li>
+            <li><a href="{% url 'add_book' %}"><img src="{% static '/add_item_btn.png' %}" alt="Add Item" height="75"></a></li>
+            <li><a href="/search/"><img src="{% static '/search_item_btn.png' %}" alt="Update Quantities / Search Items" height="75"></a></li>
+            <li><a href="/view_all/"><img src="{% static '/view_item_btn.png' %}" alt="View All Items" height="75"></a></li>
+            <li><a href="/report/"><img src="{% static '/user_report_btn.png' %}" alt="User Report" height="75"></a></li>
+            <li><a href="/settings/"><img src="{% static '/settings_btn.png' %}" alt="Settings" height="75"></a></li>
+            <li><a href="{% url 'logout' %}"><img src="{% static '/sign_out_btn.png' %}" alt="Sign Out" height="75"></a></li>
         </ul>
     </nav>
 
@@ -54,7 +58,6 @@
         </div>
         <div class="footer-section right-footer">
             <ul>
-				<li><a href="/settings/">Settings</a></li>
                 <li><a href="{% url 'about' %}">About Us</a></li>
             </ul>
         </div>

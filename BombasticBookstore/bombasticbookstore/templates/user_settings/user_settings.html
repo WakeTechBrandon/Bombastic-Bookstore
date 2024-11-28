@@ -1,5 +1,7 @@
+<!-- User settings template: extends the logo.html template -->
 {% extends "logo.html" %}
 
+<!-- Load static files -->
 {% load static %}
 
 <!DOCTYPE html>
@@ -8,6 +10,7 @@
 	<title>User Settings</title>
 </head>
 {% block content %}
+<!-- Start of the page content block -->
 <body>
 <main>
 	<div class="container">
@@ -16,12 +19,7 @@
 			<form method="post">
 				{{ form.as_p }}
 				{% csrf_token %}
-				<!-- <label for="theme-select">Theme:</label>
-				<select id="theme-select" name="theme">
-					<option value="light">Light</option>
-					<option value="dark">Dark</option>
-				</select>
-				<button type="submit">Save changes</button> -->
+				<button type="submit">Save Changes</button>
 			</form>
 		</div>
 	</div>
